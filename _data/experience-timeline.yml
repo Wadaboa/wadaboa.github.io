@@ -1,24 +1,39 @@
+- title: walterquiet.com
+  from: December 2018
+  to: present
+  description:
+    - Position → Website administrator · Freelance
+    - Project → Photography presentation website
+    - Technologies → Wordpress, Squarespace, Woocommerce, Leadpages, Deadline Funnel, Kajabi, Kartra
+
 - title: Quid informatica S.p.A.
   from: March 2019
   to: October 2019
   description:
+    - Position → Python developer · Internship (3 mos) · Freelance (5 mos)
+    - Project → Identity documents OCR library development
+    - Technologies → Python, OpenCV, Django, Tesseract, Google Vision, ABBYY
 
 - title: Continental S.p.A.
   from: January 2019
   to: September 2019
   description:
-
-- title: walterquiet.com
-  from: December 2018
-  to: present
-  description:
+    - Position → Python developer · Freelance
+    - Project → Manually operated visual inspection digitalization
+    - Technologies → Python, Qt
 
 - title: Easyclaims.eu
   from: January 2018
   to: March 2018
   description:
+    - Position → PHP developer · Freelance
+    - Project → Insurance claims video verification interface
+    - Technologies → PHP, MySQL
 
 - title: Develer S.r.l.
   from: June 2015
   to: June 2015
   description:
+    - Position → Python developer · Internship
+    - Project → Barcode handling GUI design and deployment
+    - Technologies → Python, Qt

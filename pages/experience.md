@@ -6,8 +6,8 @@ weight: 4
 ---
 
 <div class="row">
-{% include about/timeline.html title="Education" source=site.data.education-timeline %}
+{% include experience/timeline.html title="Education" source=site.data.education-timeline %}
 </div>
 <div class="row">
-{% include about/timeline.html title="Experience" source=site.data.experience-timeline %}
+{% include experience/timeline.html title="Experience" source=site.data.experience-timeline %}
 </div>

@@ -16,7 +16,7 @@
 
 - name: Curiosity
   percentage: 80
-  color: light
+  color: dark
 
 - name: Leadership
   percentage: 70

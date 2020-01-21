@@ -15,5 +15,5 @@
   color: dark
 
 - name: Prolog
-  percentage: 20
-  color: light
+  percentage: 30
+  color: warning

@@ -8,7 +8,7 @@
 
 - name: Git
   percentage: 70
-  color: light
+  color: danger
 
 - name: Docker
   percentage: 50

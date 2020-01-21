@@ -7,5 +7,5 @@
   color: success
 
 - name: Django
-  percentage: 20
-  color: light
+  percentage: 35
+  color: secondary

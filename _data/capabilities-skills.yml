@@ -2,7 +2,7 @@
   percentage: 100
   color: warning
 
-- name: Project planning/Project management
+- name: Project management
   percentage: 90
   color: secondary
 

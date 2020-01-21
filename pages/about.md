@@ -23,9 +23,13 @@ In my future I would love to spend some time working, studying or just exploring
 
 <div class="row">
 {% include about/skills.html title="Programming" source=site.data.programming-skills %}
-{% include about/skills.html title="Technologies" source=site.data.technologies-skills %}
-{% include about/skills.html title="Tools" source=site.data.tools-skills %}
 {% include about/skills.html title="Web" source=site.data.web-skills %}
+</div>
+<div class="row">
+{% include about/skills.html title="Tools" source=site.data.tools-skills %}
+{% include about/skills.html title="Technologies" source=site.data.technologies-skills %}
+</div>
+<div class="row">
 {% include about/skills.html title="Languages" source=site.data.languages-skills %}
 {% include about/skills.html title="Capabilities" source=site.data.capabilities-skills %}
 </div>

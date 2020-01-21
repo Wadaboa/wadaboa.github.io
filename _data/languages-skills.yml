@@ -1,0 +1,7 @@
+- name: Italian
+  percentage: 100
+  color: success
+
+- name: English
+  percentage: 80
+  color: secondary

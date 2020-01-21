@@ -1,0 +1,11 @@
+- name: OpenCV
+  percentage: 65
+  color: warning
+
+- name: Qt
+  percentage: 60
+  color: success
+
+- name: Django
+  percentage: 20
+  color: light

@@ -1,11 +1,19 @@
-- name: HTML5/CSS3
+- name: Python
   percentage: 90
   color: danger
 
-- name: Go
+- name: Java
   percentage: 80
-  color:
+  color: info
 
-- name: Python
-  percentage: 70
+- name: C/C++
+  percentage: 55
+  color: secondary
+
+- name: MATLAB
+  percentage: 35
   color: dark
+
+- name: Prolog
+  percentage: 20
+  color: light

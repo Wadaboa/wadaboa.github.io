@@ -1,0 +1,23 @@
+- name: Organization
+  percentage: 100
+  color: warning
+
+- name: Project planning/Project management
+  percentage: 90
+  color: secondary
+
+- name: Problem solving
+  percentage: 90
+  color: success
+
+- name: Teamwork
+  percentage: 80
+  color: danger
+
+- name: Curiosity
+  percentage: 80
+  color: light
+
+- name: Leadership
+  percentage: 70
+  color: info

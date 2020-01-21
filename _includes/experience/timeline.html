@@ -1,10 +1,20 @@
+<style>
+	ul {
+		padding-left: 25px;
+	}
+
+	.content {
+		font-size: 0.9em;
+	}
+</style>
+
 <div class="col mt-4">
 	<h2 class="mb-3">{{ include.title }}</h2>
 	<div class="timeline-body">
 		{% for item in include.source %}
 		<div class="timeline-item">
 			<div class="content">
-				<h2>{{ item.title }}</h2>
+				<h4>{{ item.title }}</h4>
 				<h6 class="date">{{ item.from }} — {{ item.to }}</h6>
 				<ul>
 					{% for desc in item.description %}

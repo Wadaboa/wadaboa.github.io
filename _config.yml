@@ -67,3 +67,13 @@ exclude:
   - LICENSE
   - Gemfile
   - Gemfile.lock
+
+### Liquid latex settings ###
+liquid_latex:
+  debug: false
+  density: 300
+  output_directory: /assets/latex
+  latex_cmd: "latex -interaction=nonstopmode $texfile &> /dev/null"
+  dvips_cmd: "dvips -E $dvifile -o $epsfile &> /dev/null"
+  convert_cmd: "convert -density $density $epsfile $pngfile &> /dev/null"
+  temp_filename: "latex_temp"

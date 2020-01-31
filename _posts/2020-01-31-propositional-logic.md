@@ -40,15 +40,15 @@ A **formula** (or well-formed formula) is a sequence of alphabet symbols generat
 
 1. Every propositional symbol and logical constant is a formula (_atomic formula_)
 2. Every sequence $ \lnot \phi $ is a formula
-3. Every sequence $ \phi \square \psi $ is a formula, where $ \phi $ and $ \psi $ are formulas and $ \square \in \left\{\wedge, \vee, \to\right\} $
+3. Every sequence $ \phi \square \psi $ is a formula, where $ \phi $ and $ \psi $ are formulas and $ \square \in \{ \wedge, \vee, \to \} $
 
 Everything we talked about so far regards the **syntax** of a propositional logic language, while for the **semantics**, i.e. the _meaning_, we can introduce a valuation function which takes a formula and returns a boolean value, either 0 (false) or 1 (true).<br>
 Let $ v $ be a **valuation function** such that:
 
-- $ v(P) \in \left\{0, 1\right\} $, where $ P $ is a propositional symbol
+- $ v(P) \in \{ 0, 1 \} $, where $ P $ is a propositional symbol
 - $ v(\top) = 1 $ and $ v(\bot) = 0 $
-- $ v(\phi \wedge \psi) = min\left\{v(\phi), v(\psi)\right\} $
-- $ v(\phi \vee \psi) = max\left\{v(\phi), v(\psi)\right\} $
+- $ v(\phi \wedge \psi) = min \{ v(\phi), v(\psi) \} $
+- $ v(\phi \vee \psi) = max \{ v(\phi), v(\psi) \} $
 - $ v(\phi \to \psi) = 0 $ if and only if $ v(\phi) = 1 $ and $ v(\psi) = 0 $, otherwise $ v(\phi \to \psi) = 1 $
 - $ \lnot v(\phi) = 1 - v(\phi) $
 

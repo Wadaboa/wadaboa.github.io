@@ -12,7 +12,6 @@ remote_theme: YoussefRaafatNasry/portfolYOU
 ### Build Settings ###
 plugins:
   - jemoji
-  - liquid_latex
 
 ### Navbar Settings ###
 nav_exclude:
@@ -68,13 +67,3 @@ exclude:
   - LICENSE
   - Gemfile
   - Gemfile.lock
-
-### Liquid latex settings ###
-liquid_latex:
-  debug: false
-  density: 300
-  output_directory: /assets/latex
-  latex_cmd: "latex -interaction=nonstopmode $texfile &> /dev/null"
-  dvips_cmd: "dvips -E $dvifile -o $epsfile &> /dev/null"
-  convert_cmd: "convert -density $density $epsfile $pngfile &> /dev/null"
-  temp_filename: "latex_temp"

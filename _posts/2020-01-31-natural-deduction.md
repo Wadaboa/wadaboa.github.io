@@ -8,12 +8,12 @@ description: >-
 	which is a straightforward technique that allows us to derive conclusions from premises."
 ---
 
-{% latex %}
-\begin{eqnarray*}
-(A\cup B)-(C-A) &=& (A\cup B) \cap (C-A)^c\\
-&=& (A\cup B) \cap (C \cap A^c)^c \\
-&=& (A\cup B) \cap (C^c \cup A) \\
-&=& A \cup (B\cap C^c) \\
-&=& A \cup (B-C)
-\end{eqnarray*}
-{% endlatex %}
+{% include lib/mathjax.html %}
+
+$$
+M = \left( \begin{array}{ccc}
+x_{11} & x_{12} & \ldots \\
+x_{21} & x_{22} & \ldots \\
+\vdots & \vdots & \ldots \\
+\end{array} \right)
+$$

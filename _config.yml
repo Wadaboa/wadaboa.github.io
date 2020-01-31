@@ -12,6 +12,7 @@ remote_theme: YoussefRaafatNasry/portfolYOU
 ### Build Settings ###
 plugins:
   - jemoji
+  - liquid_latex
 
 ### Navbar Settings ###
 nav_exclude:

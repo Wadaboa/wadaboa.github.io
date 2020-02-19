@@ -6,11 +6,11 @@
   percentage: 60
   color: success
 
-- name: SciPy (NumPy, Pandas, ...)
+- name: SciPy
   percentage: 50
   color: dark
 
-- name: SciKits (scikit-learn, scikit-image, ...)
+- name: SciKits
   percentage: 40
   color: danger
 

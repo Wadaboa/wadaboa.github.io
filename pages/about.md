@@ -26,7 +26,7 @@ I'm an avid Apple user and I have a great passion in Linux and open source softw
 I'm always studying, learning and looking for new technologies, new ideas and possibilities.
 Always pursuing more Computer Science, Photography and English studies :books:.
 
-In my future I would love to spend some time working, studying or just exploring America, Canada, Australia and Japan :airplane:. 
+In my future I would love to spend some time working, studying or just exploring America, Canada, Australia and Japan :airplane:.
 
 <div class="row">
 {% include about/skills.html title="Programming" source=site.data.programming-skills %}
@@ -34,7 +34,7 @@ In my future I would love to spend some time working, studying or just exploring
 </div>
 <div class="row">
 {% include about/skills.html title="Tools" source=site.data.tools-skills %}
-{% include about/skills.html title="Technologies" source=site.data.technologies-skills %}
+{% include about/skills.html title="Libraries" source=site.data.libraries-skills %}
 </div>
 <div class="row">
 {% include about/skills.html title="Languages" source=site.data.languages-skills %}

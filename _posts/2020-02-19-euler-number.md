@@ -10,8 +10,8 @@ description: "An in-depth look at the Euler number computation, along with a sim
 
 ### Introduction
 
-Blob analysis is the process whereby features are extracted from **Binary Large OBjects (BLOBs)**, where a BLOB is just a connected component inside a _binary image_ and a blob's feature could be its shape, position or orientation, for example.
-The blobs analysis step is usually performed after _image binarization_ and _connected components labeling_, where each blob gets assigned a unique label (a number which is not related to gray-level values).
+Blob analysis is the process whereby features are extracted from **Binary Large OBjects (BLOBs)**, where a BLOB is just a connected component inside a _binary image_ and a blob's feature could be its shape, position or orientation, for example.<br>
+The blobs analysis step is usually performed after _image binarization_ and _connected components labeling_, where each blob gets assigned a unique label (a number which is not related to gray-level values).<br>
 The features that we observe on a blob could be related to its _contour_ (e.g. the area of the blob), or they could be related to the _whole region_ (e.g. the perimeter of the blob).
 
 ### Euler number
@@ -22,19 +22,22 @@ $$
 e=\lim_{n\to+\infty} (1 + \frac{1}{n})^{n},
 $$
 
-but rather we are mentioning a **topological feature** related to blob analysis, which is invariant to the so-called _rubber-sheet transformations_, hence it is also similarity (rotation, translation and scale) invariant.
+but rather we are mentioning a **topological feature** related to blob analysis, which is invariant to the so-called _rubber-sheet transformations_, hence it is also similarity (rotation, translation and scale) invariant.<br>
 So, the **Euler number** is actually defined as follows:
 
 $$
 E = C - H,
 $$
 
-where $C$ is the number of connected components in our image and $H$ is the total number of **holes** in our blobs.
-Usually, this blob feature is used to count the number of holes inside each connected component: to do so, you obviously need to set $C = 1$ and you also need a way to actually compute the Euler number.
-It can be shown that, based on the chosen distance used to represent neighborhoods in our analysis, the Euler number can be easily computed by sliding some $2\times2$ binary patterns, named **bit quads**, across the image to count the number of occurrences of each pattern:
+where $C$ is the number of connected components in our image and $H$ is the total number of **holes** in our blobs.<br>
+Usually, this blob feature is used to count the number of holes inside each connected component: to do so, you obviously need to set $C = 1$ and you also need a way to actually compute the Euler number.<br>
+It can be shown that, based on the chosen distance used to represent neighborhoods in our analysis, the Euler number can be easily computed by sliding some $2\times2$ binary patterns, named **bit quads**, across the image, to count the number of occurrences of each pattern:
 
 $$
 E_{4} = \frac{1}{4} [n(Q_{1}) - n(Q_{3}) + 2n(Q_{D})],
+$$
+
+$$
 E_{8} = \frac{1}{4} [n(Q_{1}) - n(Q_{3}) - 2n(Q_{D})],
 $$
 
@@ -103,7 +106,7 @@ One thing to keep in mind is that when you compute the Euler number with the goa
 
 ### Python implementation
 
-In this section I will present my personal implementation of the computation of the Euler number and on how to count the number of holes in each connected component in our image. The following scripts will use the open-source libraries `opencv` and `numpy`, without explicitely importing them.
+In this section I will present my personal implementation of the computation of the Euler number and on how to count the number of holes in each connected component in our image. The following scripts will use the open-source libraries `opencv` and `numpy`, without explicitely importing them.<br>
 First of all, we have to define the bit quads as a _global dictionary_:
 
 ```python
@@ -240,7 +243,7 @@ def holes_number(labels, num_labels, connectivity=8):
     return n_holes
 ```
 
-The `holes_number` function calls the `get_connected_component` function and, for each mask image, computes the number of holes as $H = 1 - E$, where $E$ is the value returned by `euler_number` by matching the bit quads across the mask image. Finally, a list indexed by the blob's label number is returned by the function, where each position contains the number of holes in that specific region.
+The `holes_number` function calls the `get_connected_component` function and, for each mask image, computes the number of holes as $H = 1 - E$, where $E$ is the value returned by `euler_number` by matching the bit quads across the mask image. Finally, a list indexed by the blob's label number is returned by the function, where each position contains the number of holes in that specific region.<br>
 If you don't know how to compute the **connected components** in your image, the `opencv` library has the following method available:
 
 ```python
@@ -251,5 +254,5 @@ num_labels, labels, stats, centroids = cv2.connectedComponentsWithStats(
 
 ### Final considerations
 
-If you have any kind of issue or doubt, feel free to comment [my project on Github](https://github.com/Wadaboa/cv-con-rod-inspection), which is where I actually implemented the provided Python source code.
+If you have any kind of issue or doubt, feel free to comment [my project on Github](https://github.com/Wadaboa/cv-con-rod-inspection), which is where I actually implemented the provided Python source code.<br>
 Anyway, I know that my way of computing the Euler number is not the fastest, so I'm looking on new ways to try and improve it. I think that the bottleneck may be _strides_ related.

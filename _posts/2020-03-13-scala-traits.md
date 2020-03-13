@@ -106,7 +106,7 @@ class C() extends A with B {
 }
 ```
 
-Alternatively to `class C() extends A with B`, we could have also written `class C() with A with B`.\
+Alternatively to `class C() extends A with B`, we could have also written `class C() with A with B`.<br>
 Beware that the **order** in which traits are listed actually matters, since the last trait will be considered first in case of traits that override methods (in our example, calling `foo()` on an instance of type `C` will print out "_bar_" instead of "_foo_").
 
 A very useful thing which distinguishes Java 8 interfaces with default methods w.r.t. Scala traits is that the latter provide the so called **dynamic binding** of `super`: the `super` keyword can be used inside a trait to refer to the superclass of the class implementing the trait. Obviously, the `super` keyword cannot be _statically interpreted_ because the trait can be mixed-in different classes, with different superclasses; so, it has to be _dinamically bound_ to the superclass of the mixed-in class. For example:

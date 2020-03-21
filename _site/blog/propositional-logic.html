@@ -1,0 +1,86 @@
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	  tex2jax: {
+		inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+		processEscapes: true
+	  }
+	});
+</script>
+
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+<h3 id="introduction">Introduction</h3>
+
+<p>If you are not familiar with propositional logic, it is the simplest possible form of <strong>reasoning</strong>, which could be defined as:</p>
+
+<blockquote>
+	<p>The action of thinking about something in a logical, sensible way</p>
+</blockquote>
+
+<p>In propositional logic we can describe and manipulate some easy expressions in order to model a certain real-world scenario and make <strong>inferences</strong>, i.e. <em>deductions</em>, in that specific model.<br />
+In <strong>classical propositional logic</strong> everything we can model are “imperative” sentences, like “3 is a prime number”.
+Usually, what we do is we assign a “name” to the sentences we are interested in and we try to derive some conclusions.</p>
+
+<h3 id="syntax--semantics">Syntax &amp; semantics</h3>
+
+<p>First of all, let’s define what a proposition is, since it will be useful to understand the type of objects we are dealing with:</p>
+
+<blockquote>
+	<p>A proposition is a statement or assertion that expresses a judgement or opinion.</p>
+</blockquote>
+
+<p>In propositional logic, we can define an alphabet to work with, which is composed by:</p>
+
+<ul>
+  <li><strong>Propositional symbols</strong> $ A, B, C, … $</li>
+  <li><strong>Logical connectives</strong> $ \lnot, \wedge, \vee and \to $</li>
+  <li><strong>Logical constants</strong> $ \bot $ (<em>verum</em>) and $ \top $ (<em>falsum</em>)</li>
+</ul>
+
+<p>The propositional symbols are those “names” that we assign to interesting elementary sentences, which can be combined together by using the logical connectives.</p>
+
+<p>A <strong>formula</strong> (or well-formed formula) is a sequence of alphabet symbols generated with the following rules:</p>
+
+<ol>
+  <li>Every propositional symbol and logical constant is a formula (<em>atomic formula</em>)</li>
+  <li>Every sequence $ \lnot \phi $ is a formula</li>
+  <li>Every sequence $ \phi \square \psi $ is a formula, where $ \phi $ and $ \psi $ are formulas and $ \square $ could be $ \wedge, \vee $ or $ \to $</li>
+</ol>
+
+<p>Everything we talked about so far regards the <strong>syntax</strong> of a propositional logic language, while for the <strong>semantics</strong>, i.e. the <em>meaning</em>, we can introduce a valuation function which takes a formula and returns a boolean value, either 0 (false) or 1 (true).<br />
+Let $ v $ be a <strong>valuation function</strong> such that:</p>
+
+<ul>
+  <li>$ v(P) = 0 $ or $ v(P) = 1 $, where $ P $ is a propositional symbol</li>
+  <li>$ v(\top) = 1 $ and $ v(\bot) = 0 $</li>
+  <li>$ v(\phi \wedge \psi) = min(v(\phi), v(\psi)) $</li>
+  <li>$ v(\phi \vee \psi) = max(v(\phi), v(\psi)) $</li>
+  <li>$ v(\phi \to \psi) = 0 $ if and only if $ v(\phi) = 1 $ and $ v(\psi) = 0 $, otherwise $ v(\phi \to \psi) = 1 $</li>
+  <li>$ \lnot v(\phi) = 1 - v(\phi) $</li>
+</ul>
+
+<p>So, by assigning a boolean value to every propositional symbol (this is called <strong>interpretation</strong>) we can obtain a valuation for an entire non-atomic formula.<br />
+Related to the interpretation of a formula, this could have one of the following instrinsic properties:</p>
+
+<ul>
+  <li>A formula is <strong>satisfiable</strong> (<strong>consistent</strong>) iff there exists an interpretation in which the formula is true</li>
+  <li>A formula is <strong>valid</strong> (<strong>tautology</strong>) iff it is true under every interpretation</li>
+  <li>A formula is <strong>unsatisfiable</strong> (<strong>inconsistent</strong>) iff it is false under every interpretation</li>
+</ul>
+
+<p>The problem of deciding whether a formula is satisfiable, valid or unsatisfiable is an important topic in logic overall. In propositional logic, this problem is <em>decidible</em>, i.e. there exists an effective procedure to determine if a formula is consistent or not, since there are only a finite number of different interpretations to try ($ 2^{N} $, where $ N $ is the number of propositional symbols in use).<br />
+Moreover, the mentioned problem (<em>SAT</em> problem) is the first decision problem which was proved to belong to the complexity class of <em>NP-Complete</em> problems, by <em>Cook</em>.</p>
+
+<h3 id="inference">Inference</h3>
+
+<p>If we have some logical statements that we know to be true (our <em>knowledge base</em>), sometimes we would like to see if we can derive some conlusions from this set of formuale. This process of logical deduction is also called <strong>inference</strong> and it could be described as a form of implication, named logical consequence.<br />
+We say that the formula $ \psi $ is a <strong>logical consequence</strong> of the formula $ \phi $, and we write it as $ \phi \vDash \psi $, whenever $ \psi $ is true under every interpretation in which $ \phi $ is true (when $ \phi $ is false $ \psi $ could be anything).<br />
+We also say that two formulas are logically equivalent if they are a logical consequence of each other ($ \phi \equiv \psi $ iff $ \phi \vDash \psi $ and $ \psi \vDash \phi $).<br />
+Now, we can define two of the most important theorems in this field, which are useful for practical inference-making procedures:</p>
+
+<ul>
+  <li><strong>Deduction theorem</strong>: $\phi \vDash \psi$ iff $\phi \to \psi$ is a valid formula</li>
+  <li><strong>Proof by refutation</strong>: $\phi \vDash \psi$ iff $\phi \wedge \lnot\psi$ is an inconsistent formula</li>
+</ul>
+
+<p>The first result is mostly used in derivability schemes, like <em>natural deduction</em> and <em>sequent calculus</em>, while the second one is generally used by mechanical theorem provers.</p>

@@ -1,0 +1,23 @@
+language: ruby
+rvm:
+  - 2.3.3
+
+before_script:
+  - chmod +x ./scripts/build
+
+script: ./scripts/build
+
+branches:
+  only:
+    - master
+
+sudo: false
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  keep-history: true
+  local_dir: _site/
+  github_token: $GITHUB_API_KEY
+  on:
+    branch: master

@@ -12,6 +12,7 @@ remote_theme: YoussefRaafatNasry/portfolYOU
 ### Build Settings ###
 plugins:
   - jemoji
+  - jekyll-remote-theme
   - jekyll-admin
 
 ### Navbar Settings ###

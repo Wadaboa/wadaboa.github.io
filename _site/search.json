@@ -1,0 +1,27 @@
+[
+  
+    {
+      "title"    : "Java interfaces vs. Scala traits",
+      "category" : "",
+      "tags"     : "Scala",
+      "url"      : "/blog/scala-traits",
+      "date"     : "2020-03-13 00:00:00 +0100"
+    } ,
+  
+    {
+      "title"    : "The Euler number in blob analysis",
+      "category" : "",
+      "tags"     : "Computer Vision",
+      "url"      : "/blog/euler-number",
+      "date"     : "2020-02-19 00:00:00 +0100"
+    } ,
+  
+    {
+      "title"    : "Propositional logic",
+      "category" : "",
+      "tags"     : "Logic",
+      "url"      : "/blog/propositional-logic",
+      "date"     : "2020-01-31 00:00:00 +0100"
+    } 
+  
+]

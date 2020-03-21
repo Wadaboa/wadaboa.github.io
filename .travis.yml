@@ -25,9 +25,9 @@ deploy:
   local_dir: _site/
   github_token: $GITHUB_API_KEY
   on:
-branch: master
+	branch: master
 
 notifications:
   email:
-on_success: never
-on_failure: always
+	on_success: never
+	on_failure: always

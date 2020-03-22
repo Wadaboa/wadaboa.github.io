@@ -79,8 +79,6 @@ defaults:
 ### Exclude from processing ###
 exclude:
   - README.md
-  - CONTRIBUTING.md
-  - LICENSE
   - Gemfile
   - portfolyou-jekyll-theme.gemspec
   - Gemfile.lock

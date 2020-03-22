@@ -15,7 +15,7 @@
     {%- assign project_type = "remote" -%}
     {%- assign project_id   = project.name -%}
     {%- assign project_img  = false -%}
-    {%- assign project_name = titlecase | strip -%}
+    {%- assign project_name = project.name -%}
     {%- assign project_desc = project.description -%}
     {%- assign project_url  = project.html_url -%}
 
@@ -29,7 +29,7 @@
   {% for project in site.projects %}
 
     {%- assign project_type  = "local" -%}
-    {%- assign project_id    =  project.name | slugify -%}
+    {%- assign project_id    = project.name | slugify -%}
     {%- assign project_img   = project.image -%}
     {%- assign project_name  = project.name -%}
     {%- assign project_desc  = project.description -%}

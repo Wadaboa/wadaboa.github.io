@@ -3,6 +3,12 @@
 
 <div class="card-columns m-3 mt-5">
 
+  <script>
+    check_rate_limit().then(value => {
+      console.log(value);
+    });
+  </script>
+
   <!-- Remote Projects -->
   {% for remote_project in page.remote_projects %}
 

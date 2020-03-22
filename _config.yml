@@ -6,7 +6,7 @@ description: >-
   learning something new everyday :open_book:."
 url: "alessiofalai.it"
 baseurl: ""
-repository: YoussefRaafatNasry/portfolYOU
+repository: Wadaboa/wadaboa.github.io
 remote_theme: YoussefRaafatNasry/portfolYOU
 
 ### Build Settings ###
@@ -58,6 +58,8 @@ collections:
   projects:
     output: true
     permalink: /projects/:name
+  elements:
+    output: true
 
 ### Defaults for collections ###
 defaults:
@@ -66,6 +68,11 @@ defaults:
       type: "projects"
     values:
       layout: "page"
+  - scope:
+      path: ""
+      type: "elements"
+    values:
+      layout: "element"
 
 ### Exclude from processing ###
 exclude:

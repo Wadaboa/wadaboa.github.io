@@ -20,6 +20,7 @@ plugins:
   - jekyll-remote-theme
   - jekyll-admin
   - jekyll-sitemap
+  - jekyll-analytics
 
 ### Navbar Settings ###
 nav_exclude:
@@ -84,3 +85,9 @@ exclude:
   - portfolyou-jekyll-theme.gemspec
   - Gemfile.lock
   - vendor
+
+### Google analytics ###
+jekyll_analytics:
+  GoogleAnalytics:
+    id: UA-161544643-1
+    anonymizeIp: false

@@ -22,5 +22,6 @@ Gem::Specification.new do |spec|
 	spec.add_runtime_dependency "jekyll-remote-theme", "~> 0.4.2"
 	spec.add_runtime_dependency "jekyll-admin", "~> 0.10.0"
 	spec.add_runtime_dependency "jekyll-sitemap", "~> 1.4.0"
+	spec.add_runtime_dependency "jekyll-analytics", "~> 0.1.12"
 
   end

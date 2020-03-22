@@ -19,6 +19,7 @@ plugins:
   - jemoji
   - jekyll-remote-theme
   - jekyll-admin
+  - jekyll-sitemap
 
 ### Navbar Settings ###
 nav_exclude:

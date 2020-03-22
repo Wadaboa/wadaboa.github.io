@@ -1,44 +1,24 @@
-function get_tools(repo_name) {
-	fetch(
-		`https://api.github.com/repos/{{ site.github.owner_name }}/${repo_name}/topics`,
-		{
-			headers: {
-				Accept: "application/vnd.github.mercy-preview+json"
-			}
-		}
-	)
-		.then(response => response.json())
-		.then(data =>
-			data.names.forEach(tool => {
-				var toolSpan = document.createElement("span");
-				toolSpan.innerHTML = tool;
-				toolSpan.classList.add("badge");
-				toolSpan.classList.add("badge-pill");
-				toolSpan.classList.add("text-primary");
-				toolSpan.classList.add("border");
-				toolSpan.classList.add("border-primary");
-
-				var parent = document.getElementById(`${repo_name}-tools`);
-				parent.appendChild(toolSpan);
-				parent.appendChild(document.createTextNode(" "));
-			})
-		);
+function get_tools(repo) {
+  fetch(`https://api.github.com/repos/${repo}/topics`, {
+    headers: {
+      Accept: "application/vnd.github.mercy-preview+json"
+    }
+  })
+    .then(response => response.json())
+    .then(data => {
+      var name = repo.split("/")[1];
+      var parent = document.getElementById(`${name}-tools`);
+      parse_tools(data.names).forEach(t => parent.appendChild(t));
+    });
 }
 
-function check_rate_limit() {
-	fetch(
-		`http://api.github.com/repos/{{ site.github.owner_name }}/wadaboa.github.io/topics`,
-		{
-			headers: {
-				Accept: "application/vnd.github.mercy-preview+json"
-			}
-		}
-	)
-		.then(response => response.json())
-		.then(data => {
-			return !data["message"].includes("API rate limit exceeded");
-		})
-		.catch(() => {
-			return false;
-		});
+function parse_tools(tools) {
+  var classes = "badge badge-pill text-primary border border-primary ml-1";
+  var classesArr = classes.split(" ");
+  return tools.map(tool => {
+    var span = document.createElement("span");
+    span.classList.add(...classesArr);
+    span.innerHTML = tool;
+    return span;
+  });
 }

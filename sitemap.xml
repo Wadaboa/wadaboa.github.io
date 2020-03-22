@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>alessiofalai.it/blog/propositional-logic</loc>
+<lastmod>2020-01-31T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>alessiofalai.it/blog/euler-number</loc>
+<lastmod>2020-02-19T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>alessiofalai.it/blog/scala-traits</loc>
+<lastmod>2020-03-13T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>alessiofalai.it/404</loc>
+</url>
+<url>
+<loc>alessiofalai.it/about/</loc>
+</url>
+<url>
+<loc>alessiofalai.it/experience/</loc>
+</url>
+<url>
+<loc>alessiofalai.it/blog/</loc>
+</url>
+<url>
+<loc>alessiofalai.it/</loc>
+</url>
+<url>
+<loc>alessiofalai.it/projects/</loc>
+</url>
+<url>
+<loc>alessiofalai.it/blog/tags</loc>
+</url>
+</urlset>

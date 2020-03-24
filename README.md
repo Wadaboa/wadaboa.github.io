@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Wadaboa/wadaboa.github.io.svg?branch=master)](https://travis-ci.org/Wadaboa/wadaboa.github.io)
+[![Build Status](https://travis-ci.com/Wadaboa/wadaboa.github.io.svg?branch=release)](https://travis-ci.com/Wadaboa/wadaboa.github.io)
 
 # My personal website
 

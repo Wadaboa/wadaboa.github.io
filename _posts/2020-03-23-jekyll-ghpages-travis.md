@@ -59,13 +59,13 @@ So, why is **Travis CI** needed if the entire deployment is already done by Gith
 
 ### What is Travis CI?
 
-[Travis CI](https://travis-ci.org/) is a tool used to automate some repetitive programming tasks, which fall under the category known as _DevOps_.
+[Travis CI](https://travis-ci.com/) is a tool used to automate some repetitive programming tasks, which fall under the category known as _DevOps_.
 
 In our example, how could Travis CI help us? Well, if you are using a Jekyll Github-hosted remote theme and you want to **extend it** with new functionalities, such as new plugins, you may want to locally build your Jekyll project and then directly push the generated static files to Github pages, in order to let it serve those files without the need to perform **build operations**. This operation is actually needed when you want to work with **non-safe plugins**, i.e. plugins which are not supported by the build process of Github pages. Examples of such plugins are `jekyll-analytics` and `jekyll-sitemap`.
 
 In order to work with Travis CI, we need to follow some simple steps:
 
-- Head over to the [Travis CI website](https://travis-ci.org/) and sign-in using **Github**
+- Head over to the [Travis CI website](https://travis-ci.com/) and sign-in using **Github**
 - Click on your profile picture in the top right of your _Travis Dashboard_, click _Settings_ and then the green _Activate_ button, and select the repositories you want to use with Travis CI (in this example we have to select our `<username>.github.io`)
 - On Github, click on your profile picture in the top right → _Settings_ → _Developer settings_ → _Personal access tokens_ → _Generate new token_, then add a _Travis CI_ entry with the `repo` scopes and copy the corresponding token
 - On Travi CI, click on _Dashboard_ → `<username>.github.io` under _Active repositories_ → _More options_ → _Settings_ → _Environment Variables_ and set the variable `GITHUB_API_KEY` with value the **Github generated token**

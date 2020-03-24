@@ -24,7 +24,7 @@ cache: bundler
 deploy:
   provider: pages
   skip_cleanup: true
-  keep-history: true
+  keep_history: true
   local_dir: _site/
   target_branch: master
   github_token: $GITHUB_API_KEY

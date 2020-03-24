@@ -163,18 +163,18 @@
 
 <h3 id="what-is-travis-ci">What is Travis CI?</h3>
 
-<p><a href="https://travis-ci.com/">Travis CI</a> is a tool used to automate some repetitive programming tasks, which fall under the category known as <em>DevOps</em>.</p>
+<p><a href="https://travis-ci.org/">Travis CI</a> is a tool used to automate some repetitive programming tasks, which fall under the category known as <em>DevOps</em>.</p>
 
 <p>In our example, how could Travis CI help us? Well, if you are using a Jekyll Github-hosted remote theme and you want to <strong>extend it</strong> with new functionalities, such as new plugins, you may want to locally build your Jekyll project and then directly push the generated static files to Github pages, in order to let it serve those files without the need to perform <strong>build operations</strong>. This operation is actually needed when you want to work with <strong>non-safe plugins</strong>, i.e. plugins which are not supported by the build process of Github pages. Examples of such plugins are <code class="highlighter-rouge">jekyll-analytics</code> and <code class="highlighter-rouge">jekyll-sitemap</code>.</p>
 
 <p>In order to work with Travis CI, we need to follow some simple steps:</p>
 
 <ul>
-  <li>Head over to the <a href="https://travis-ci.com/">Travis CI website</a> and sign-in using <strong>Github</strong>
+  <li>Head over to the <a href="https://travis-ci.org/">Travis CI website</a> and sign-in using <strong>Github</strong>
 </li>
   <li>Click on your profile picture in the top right of your <em>Travis Dashboard</em>, click <em>Settings</em> and then the green <em>Activate</em> button, and select the repositories you want to use with Travis CI (in this example we have to select our <code class="highlighter-rouge">&lt;username&gt;.github.io</code>)</li>
   <li>On Github, click on your profile picture in the top right → <em>Settings</em> → <em>Developer settings</em> → <em>Personal access tokens</em> → <em>Generate new token</em>, then add a <em>Travis CI</em> entry with the <code class="highlighter-rouge">repo</code> scopes and copy the corresponding token</li>
-  <li>On Travis CI, click on <em>Dashboard</em> → <code class="highlighter-rouge">&lt;username&gt;.github.io</code> under <em>Active repositories</em> → <em>More options</em> → <em>Settings</em> → <em>Environment Variables</em> and set the variable <code class="highlighter-rouge">GITHUB_API_KEY</code> with value the <strong>Github generated token</strong>
+  <li>On Travi CI, click on <em>Dashboard</em> → <code class="highlighter-rouge">&lt;username&gt;.github.io</code> under <em>Active repositories</em> → <em>More options</em> → <em>Settings</em> → <em>Environment Variables</em> and set the variable <code class="highlighter-rouge">GITHUB_API_KEY</code> with value the <strong>Github generated token</strong>
 </li>
 </ul>
 
@@ -226,6 +226,7 @@
 <span class="nb">set</span> <span class="nt">-e</span>
 <span class="nv">JEKYLL_ENV</span><span class="o">=</span>production bundle <span class="nb">exec </span>jekyll build <span class="nt">--destination</span> _site
 <span class="nb">touch</span> ./_site/.nojekyll
+
 </code></pre></div></div>
 
 <p>In order to make everything work, you will also need to create two new branches:</p>
@@ -241,13 +242,7 @@
 
 <p>Remember that the <code class="highlighter-rouge">master</code> branch is where Travis CI will copy the static files associated with your Jekyll website. These static files are generated inside the <code class="highlighter-rouge">_site</code> folder in the root of your project when you perform a <code class="highlighter-rouge">bundle exec jekyll build</code> operation and they should not be present in your <code class="highlighter-rouge">release</code> branch, hence you should always add <code class="highlighter-rouge">_site/</code> to your <code class="highlighter-rouge">.gitignore</code> file.</p>
 
-<p><strong>NOTE</strong>: If you were using the <a href="https://github.com/jekyll/github-metadata"><code class="highlighter-rouge">jekyll-github-metadata</code></a> before using Travis CI, you will find out that this plugin no longer works after performing the described steps. To fix it, you have to do the following:</p>
-
-<ol>
-  <li>On Github, click on your profile picture in the top right → <em>Settings</em> → <em>Developer settings</em> → <em>Personal access tokens</em> → <em>Generate new token</em>, then add a <em>Jekyll</em> entry with the <code class="highlighter-rouge">repo</code> scopes and copy the corresponding token</li>
-  <li>On Travis CI, click on <em>Dashboard</em> → <code class="highlighter-rouge">&lt;username&gt;.github.io</code> under <em>Active repositories</em> → <em>More options</em> → <em>Settings</em> → <em>Environment Variables</em> and set the variable <code class="highlighter-rouge">JEKYLL_GITHUB_TOKEN</code> with value the <strong>Github generated token</strong>
-</li>
-</ol>
+<p>TEST 2</p>
 
 
 </div>

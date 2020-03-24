@@ -1,3 +1,92 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content=""I love keyboards :keyboard:,  open-source software :penguin: and  learning something new everyday :open_book:."">
+
+  <title>Alessio Falai</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" type="text/css"/>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
+
+
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-161544643-1', 'auto');
+	ga('send', 'pageview', { 'page': location.pathname + location.search + location.hash});
+	ga('set', 'anonymizeIp', false);
+    </script>
+    <!-- End Google Analytics -->
+    </head>
+
+
+<body class="d-flex flex-column h-100">
+
+  <main class="flex-shrink-0 container mt-5">
+  <nav class="navbar navbar-expand-lg navbar-light">
+
+  <a class="navbar-brand" href="/"><h5><b>Alessio Falai</b></h5></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto">
+<a class="nav-item nav-link " href="/projects/">Projects</a>
+
+      <a class="nav-item nav-link active" href="/blog/">Blog</a>
+
+      <a class="nav-item nav-link " href="/about/">About</a>
+
+      <a class="nav-item nav-link " href="/experience/">Experience</a>
+
+      
+
+    </div>
+  </div>
+
+</nav>
+  <div class="col-lg-10 mx-auto mt-5 post">
+  <h1><b>The Euler number in blob analysis</b></h1>
+
+<p class="post-metadata text-muted">
+  19 February 2020 -  
+  <b>9 mins read time</b>
+
+  <br>Tags: 
+    
+    <a class="text-decoration-none no-underline" href="/blog/tags#computer-vision">
+      <span class="tag badge badge-pill text-primary border border-primary">Computer Vision</span>
+    </a>
+    </p>
+
 <script type="text/x-mathjax-config">
 	MathJax.Hub.Config({
 	  tex2jax: {
@@ -11,8 +100,8 @@
 
 <h3 id="introduction">Introduction</h3>
 
-<p>Blob analysis is the process whereby features are extracted from <strong>Binary Large OBjects (BLOBs)</strong>, where a BLOB is just a connected component inside a <em>binary image</em> and a blob’s feature could be its shape, position or orientation, for example.<br />
-The blobs analysis step is usually performed after <em>image binarization</em> and <em>connected components labeling</em>, where each blob gets assigned a unique label (a number which is not related to gray-level values).<br />
+<p>Blob analysis is the process whereby features are extracted from <strong>Binary Large OBjects (BLOBs)</strong>, where a BLOB is just a connected component inside a <em>binary image</em> and a blob’s feature could be its shape, position or orientation, for example.<br>
+The blobs analysis step is usually performed after <em>image binarization</em> and <em>connected components labeling</em>, where each blob gets assigned a unique label (a number which is not related to gray-level values).<br>
 The features that we observe on a blob could be related to its <em>contour</em> (e.g. the area of the blob), or they could be related to the <em>whole region</em> (e.g. the perimeter of the blob).</p>
 
 <h3 id="euler-number">Euler number</h3>
@@ -21,13 +110,13 @@ The features that we observe on a blob could be related to its <em>contour</em> 
 
 <script type="math/tex; mode=display">e=\lim_{n\to+\infty} (1 + \frac{1}{n})^{n},</script>
 
-<p>but rather we are mentioning a <strong>topological feature</strong> related to blob analysis, which is invariant to the so-called <em>rubber-sheet transformations</em>, hence it is also similarity (rotation, translation and scale) invariant.<br />
+<p>but rather we are mentioning a <strong>topological feature</strong> related to blob analysis, which is invariant to the so-called <em>rubber-sheet transformations</em>, hence it is also similarity (rotation, translation and scale) invariant.<br>
 So, the <strong>Euler number</strong> is actually defined as follows:</p>
 
 <script type="math/tex; mode=display">E = C - H,</script>
 
-<p>where $C$ is the number of connected components in our image and $H$ is the total number of <strong>holes</strong> in our blobs.<br />
-Usually, this blob feature is used to count the number of holes inside each connected component: to do so, you obviously need to set $C = 1$ and you also need a way to actually compute the Euler number.<br />
+<p>where $C$ is the number of connected components in our image and $H$ is the total number of <strong>holes</strong> in our blobs.<br>
+Usually, this blob feature is used to count the number of holes inside each connected component: to do so, you obviously need to set $C = 1$ and you also need a way to actually compute the Euler number.<br>
 It can be shown that, based on the chosen distance used to represent neighborhoods in our analysis, the Euler number can be easily computed by sliding some $2\times2$ binary patterns, named <strong>bit quads</strong>, across the image, to count the number of occurrences of each pattern:</p>
 
 <script type="math/tex; mode=display">E_{4} = \frac{1}{4} [n(Q_{1}) - n(Q_{3}) + 2n(Q_{D})],</script>
@@ -96,7 +185,7 @@ Q_{D} =
 
 <h3 id="python-implementation">Python implementation</h3>
 
-<p>In this section I will present my personal implementation of the computation of the Euler number and on how to count the number of holes in each connected component in our image. The following scripts will use the open-source libraries <code class="highlighter-rouge">opencv</code> and <code class="highlighter-rouge">numpy</code>, without explicitely importing them.<br />
+<p>In this section I will present my personal implementation of the computation of the Euler number and on how to count the number of holes in each connected component in our image. The following scripts will use the open-source libraries <code class="highlighter-rouge">opencv</code> and <code class="highlighter-rouge">numpy</code>, without explicitely importing them.<br>
 First of all, we have to define the bit quads as a <em>global dictionary</em>:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">BIT_QUADS</span> <span class="o">=</span> <span class="p">{</span>
@@ -228,7 +317,7 @@ First of all, we have to define the bit quads as a <em>global dictionary</em>:</
     <span class="k">return</span> <span class="n">n_holes</span>
 </code></pre></div></div>
 
-<p>The <code class="highlighter-rouge">holes_number</code> function calls the <code class="highlighter-rouge">get_connected_component</code> function and, for each mask image, computes the number of holes as $H = 1 - E$, where $E$ is the value returned by <code class="highlighter-rouge">euler_number</code> by matching the bit quads across the mask image. Finally, a list indexed by the blob’s label number is returned by the function, where each position contains the number of holes in that specific region.<br />
+<p>The <code class="highlighter-rouge">holes_number</code> function calls the <code class="highlighter-rouge">get_connected_component</code> function and, for each mask image, computes the number of holes as $H = 1 - E$, where $E$ is the value returned by <code class="highlighter-rouge">euler_number</code> by matching the bit quads across the mask image. Finally, a list indexed by the blob’s label number is returned by the function, where each position contains the number of holes in that specific region.<br>
 If you don’t know how to compute the <strong>connected components</strong> in your image, the <code class="highlighter-rouge">opencv</code> library has the following method available:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">num_labels</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">stats</span><span class="p">,</span> <span class="n">centroids</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">connectedComponentsWithStats</span><span class="p">(</span>
@@ -238,5 +327,62 @@ If you don’t know how to compute the <strong>connected components</strong> in 
 
 <h3 id="final-considerations">Final considerations</h3>
 
-<p>If you have any kind of issue or doubt, feel free to comment <a href="https://github.com/Wadaboa/cv-con-rod-inspection">my project on Github</a>, which is where I actually implemented the provided Python source code.<br />
+<p>If you have any kind of issue or doubt, feel free to comment <a href="https://github.com/Wadaboa/cv-con-rod-inspection">my project on Github</a>, which is where I actually implemented the provided Python source code.<br>
 Anyway, I know that my way of computing the Euler number is not the fastest, so I’m looking on new ways to try and improve it. I think that the bottleneck may be <em>strides</em> related.</p>
+
+
+</div>
+  </main>
+
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
+    by <strong>Alessio Falai</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center">
+<a class="social mx-1" href="mailto:falai.alessio@gmail.com" style="color: #6c757d" onmouseover="this.style.color='#db4437'" onmouseout="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-1x"></i>
+    </a><a class="social mx-1" href="https://www.facebook.com/wadaboa" style="color: #6c757d" onmouseover="this.style.color='#3b5998'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-facebook fa-1x"></i>
+    </a><a class="social mx-1" href="https://www.github.com/Wadaboa" style="color: #6c757d" onmouseover="this.style.color='#333333'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-1x"></i>
+    </a><a class="social mx-1" href="https://www.instagram.com/Wadaboa" style="color: #6c757d" onmouseover="this.style.color='#405de6'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-instagram fa-1x"></i>
+    </a><a class="social mx-1" href="https://www.linkedin.com/in/alessio-falai" style="color: #6c757d" onmouseover="this.style.color='#007bb5'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-linkedin-in fa-1x"></i>
+    </a>
+
+</div>
+<small id="attribution">
+    theme <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small>
+  
+</footer>
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+
+</body>
+
+</html>

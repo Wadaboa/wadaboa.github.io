@@ -1,3 +1,92 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content=""I love keyboards :keyboard:,  open-source software :penguin: and  learning something new everyday :open_book:."">
+
+  <title>Alessio Falai</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" type="text/css"/>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
+
+
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-161544643-1', 'auto');
+	ga('send', 'pageview', { 'page': location.pathname + location.search + location.hash});
+	ga('set', 'anonymizeIp', false);
+    </script>
+    <!-- End Google Analytics -->
+    </head>
+
+
+<body class="d-flex flex-column h-100">
+
+  <main class="flex-shrink-0 container mt-5">
+  <nav class="navbar navbar-expand-lg navbar-light">
+
+  <a class="navbar-brand" href="/"><h5><b>Alessio Falai</b></h5></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto">
+<a class="nav-item nav-link " href="/projects/">Projects</a>
+
+      <a class="nav-item nav-link active" href="/blog/">Blog</a>
+
+      <a class="nav-item nav-link " href="/about/">About</a>
+
+      <a class="nav-item nav-link " href="/experience/">Experience</a>
+
+      
+
+    </div>
+  </div>
+
+</nav>
+  <div class="col-lg-10 mx-auto mt-5 post">
+  <h1><b>Jekyll + Github Pages + Travis CI</b></h1>
+
+<p class="post-metadata text-muted">
+  23 March 2020 -  
+  <b>7 mins read time</b>
+
+  <br>Tags: 
+    
+    <a class="text-decoration-none no-underline" href="/blog/tags#web">
+      <span class="tag badge badge-pill text-primary border border-primary">Web</span>
+    </a>
+    </p>
+
 <h3 id="introduction">Introduction</h3>
 
 <p>Have you ever heard of <strong>static sites</strong>? Well, if your answer is no, stick with me and you will learn the basics of them.</p>
@@ -9,16 +98,21 @@
 <p><a href="https://jekyllrb.com/">Jekyll</a> is a tool used to generate simple, blog-aware, static websites. Let’s analyze those words:</p>
 
 <ul>
-  <li><strong>Simple</strong>: The gist is that you don’t have to deal with databases</li>
-  <li><strong>Blog-aware</strong>: Jekyll natively handles posts, categories, permalinks and more</li>
-  <li><strong>Static</strong>: The only files you should have to deal with are HTML, CSS and Markdown</li>
+  <li>
+<strong>Simple</strong>: The gist is that you don’t have to deal with databases</li>
+  <li>
+<strong>Blog-aware</strong>: Jekyll natively handles posts, categories, permalinks and more</li>
+  <li>
+<strong>Static</strong>: The only files you should have to deal with are HTML, CSS and Markdown</li>
 </ul>
 
 <p>Jekyll uses the so-called <a href="https://github.com/Shopify/liquid"><code class="highlighter-rouge">Liquid</code></a> template engine, developed by <strong>Shopify</strong>, which we can exploit to inject some logic into our static files. Liquid is based upon two types of markup:</p>
 
 <ul>
-  <li><em>Output</em>: A set of double curly braces containing an <strong>expression</strong>; when the template is rendered, it gets replaced with the value of that expression (e.g. <code class="highlighter-rouge">Hello {{ user.name }}</code>)</li>
-  <li><em>Tag</em>: A set of matching curly braces and percent signs, used for the <strong>logic</strong> in your template (e.g. <code class="highlighter-rouge">{% if &lt;CONDITION&gt; %} ... {% endif %}</code>)</li>
+  <li>
+<em>Output</em>: A set of double curly braces containing an <strong>expression</strong>; when the template is rendered, it gets replaced with the value of that expression (e.g. <code class="highlighter-rouge">Hello {{ user.name }}</code>)</li>
+  <li>
+<em>Tag</em>: A set of matching curly braces and percent signs, used for the <strong>logic</strong> in your template (e.g. <code class="highlighter-rouge">{% if &lt;CONDITION&gt; %} ... {% endif %}</code>)</li>
 </ul>
 
 <p>Jekyll has an extensive <strong>theme system</strong>, which we can leverage to build good-looking websites effortlessly. My personal favorite Github-hosted theme is <a href="https://github.com/YoussefRaafatNasry/portfolYOU"><code class="highlighter-rouge">PortfolYOU</code></a>, which is the one I am using right now on the website you’re on.</p>
@@ -26,20 +120,28 @@
 <p>Jekyll sites can also be enriched by <strong>plugins</strong>. You can browse for some good ones <a href="https://github.com/planetjekyll/awesome-jekyll-plugins">here</a>. My personal favorites are the following ones:</p>
 
 <ul>
-  <li><a href="https://github.com/jekyll/jemoji"><code class="highlighter-rouge">jemoji</code></a>: GitHub-flavored <strong>emoji</strong> plugin for Jekyll</li>
-  <li><a href="https://github.com/benbalter/jekyll-remote-theme"><code class="highlighter-rouge">jekyll-remote-theme</code></a>: Jekyll plugin for building Jekyll sites with any GitHub-hosted theme</li>
-  <li><a href="https://github.com/jekyll/jekyll-admin"><code class="highlighter-rouge">jekyll-admin</code></a>: A Jekyll plugin that provides users with a traditional <strong>CMS-style graphical interface</strong> to author content and administer Jekyll sites</li>
-  <li><a href="https://github.com/jekyll/jekyll-sitemap"><code class="highlighter-rouge">jekyll-sitemap</code></a>: Jekyll plugin to silently generate a <strong>sitemaps.org</strong> compliant sitemap for your Jekyll site</li>
-  <li><a href="https://github.com/hendrikschneider/jekyll-analytics"><code class="highlighter-rouge">jekyll-analytics</code></a>: Plugin to easily add <strong>webanalytics</strong> to your jekyll site. Currently Google Analytics, Piwik and mPulse are supported.</li>
+  <li>
+<a href="https://github.com/jekyll/jemoji"><code class="highlighter-rouge">jemoji</code></a>: GitHub-flavored <strong>emoji</strong> plugin for Jekyll</li>
+  <li>
+<a href="https://github.com/benbalter/jekyll-remote-theme"><code class="highlighter-rouge">jekyll-remote-theme</code></a>: Jekyll plugin for building Jekyll sites with any GitHub-hosted theme</li>
+  <li>
+<a href="https://github.com/jekyll/jekyll-admin"><code class="highlighter-rouge">jekyll-admin</code></a>: A Jekyll plugin that provides users with a traditional <strong>CMS-style graphical interface</strong> to author content and administer Jekyll sites</li>
+  <li>
+<a href="https://github.com/jekyll/jekyll-sitemap"><code class="highlighter-rouge">jekyll-sitemap</code></a>: Jekyll plugin to silently generate a <strong>sitemaps.org</strong> compliant sitemap for your Jekyll site</li>
+  <li>
+<a href="https://github.com/hendrikschneider/jekyll-analytics"><code class="highlighter-rouge">jekyll-analytics</code></a>: Plugin to easily add <strong>webanalytics</strong> to your jekyll site. Currently Google Analytics, Piwik and mPulse are supported.</li>
 </ul>
 
 <p>If you want to create a local Jekyll project you can open a command-line window and do the following:</p>
 
 <ol>
   <li>Make sure you have <code class="highlighter-rouge">Ruby</code> installed on your system</li>
-  <li>Run <code class="highlighter-rouge">gem install bundler jekyll</code></li>
-  <li>Run <code class="highlighter-rouge">jekyll new my-site &amp;&amp; cd my-site</code></li>
-  <li>Run <code class="highlighter-rouge">bundle exec jekyll serve</code></li>
+  <li>Run <code class="highlighter-rouge">gem install bundler jekyll</code>
+</li>
+  <li>Run <code class="highlighter-rouge">jekyll new my-site &amp;&amp; cd my-site</code>
+</li>
+  <li>Run <code class="highlighter-rouge">bundle exec jekyll serve</code>
+</li>
 </ol>
 
 <p>This will run your <code class="highlighter-rouge">my-site</code> locally at <code class="highlighter-rouge">http://localhost:4000</code>, so that you can open a browser and see what’s happening.</p>
@@ -68,10 +170,12 @@
 <p>In order to work with Travis CI, we need to follow some simple steps:</p>
 
 <ul>
-  <li>Head over to the <a href="https://travis-ci.org/">Travis CI website</a> and sign-in using <strong>Github</strong></li>
+  <li>Head over to the <a href="https://travis-ci.org/">Travis CI website</a> and sign-in using <strong>Github</strong>
+</li>
   <li>Click on your profile picture in the top right of your <em>Travis Dashboard</em>, click <em>Settings</em> and then the green <em>Activate</em> button, and select the repositories you want to use with Travis CI (in this example we have to select our <code class="highlighter-rouge">&lt;username&gt;.github.io</code>)</li>
   <li>On Github, click on your profile picture in the top right → <em>Settings</em> → <em>Developer settings</em> → <em>Personal access tokens</em> → <em>Generate new token</em>, then add a <em>Travis CI</em> entry with the <code class="highlighter-rouge">repo</code> scopes and copy the corresponding token</li>
-  <li>On Travi CI, click on <em>Dashboard</em> → <code class="highlighter-rouge">&lt;username&gt;.github.io</code> under <em>Active repositories</em> → <em>More options</em> → <em>Settings</em> → <em>Environment Variables</em> and set the variable <code class="highlighter-rouge">GITHUB_API_KEY</code> with value the <strong>Github generated token</strong></li>
+  <li>On Travi CI, click on <em>Dashboard</em> → <code class="highlighter-rouge">&lt;username&gt;.github.io</code> under <em>Active repositories</em> → <em>More options</em> → <em>Settings</em> → <em>Environment Variables</em> and set the variable <code class="highlighter-rouge">GITHUB_API_KEY</code> with value the <strong>Github generated token</strong>
+</li>
 </ul>
 
 <p>Now, you need to create a <code class="highlighter-rouge">.travis.yml</code> file in the root of your <code class="highlighter-rouge">&lt;username&gt;.github.io</code> repository, with the following content:</p>
@@ -128,10 +232,69 @@
 <p>In order to make everything work, you will also need to create two new branches:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">develop</code>, which will contain <strong>works-in-progress</strong>, not ready to be published</li>
-  <li><code class="highlighter-rouge">release</code>, which will contain the <strong>latest</strong> published website</li>
+  <li>
+<code class="highlighter-rouge">develop</code>, which will contain <strong>works-in-progress</strong>, not ready to be published</li>
+  <li>
+<code class="highlighter-rouge">release</code>, which will contain the <strong>latest</strong> published website</li>
 </ul>
 
 <p>When you will perform a push on the <code class="highlighter-rouge">release</code> branch, Travis CI will be <em>triggered</em> and your <em>build</em> will start. If anything goes wrong, you will receive a <strong>notification</strong> on your Github-associated email, otherwise you will see a push on the <code class="highlighter-rouge">master</code> branch, made by <code class="highlighter-rouge">traviscibot</code>, and your updated website will be <strong>live</strong>.</p>
 
 <p>Remember that the <code class="highlighter-rouge">master</code> branch is where Travis CI will copy the static files associated with your Jekyll website. These static files are generated inside the <code class="highlighter-rouge">_site</code> folder in the root of your project when you perform a <code class="highlighter-rouge">bundle exec jekyll build</code> operation and they should not be present in your <code class="highlighter-rouge">release</code> branch, hence you should always add <code class="highlighter-rouge">_site/</code> to your <code class="highlighter-rouge">.gitignore</code> file.</p>
+
+
+</div>
+  </main>
+
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
+    by <strong>Alessio Falai</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center">
+<a class="social mx-1" href="mailto:falai.alessio@gmail.com" style="color: #6c757d" onmouseover="this.style.color='#db4437'" onmouseout="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-1x"></i>
+    </a><a class="social mx-1" href="https://www.facebook.com/wadaboa" style="color: #6c757d" onmouseover="this.style.color='#3b5998'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-facebook fa-1x"></i>
+    </a><a class="social mx-1" href="https://www.github.com/Wadaboa" style="color: #6c757d" onmouseover="this.style.color='#333333'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-1x"></i>
+    </a><a class="social mx-1" href="https://www.instagram.com/Wadaboa" style="color: #6c757d" onmouseover="this.style.color='#405de6'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-instagram fa-1x"></i>
+    </a><a class="social mx-1" href="https://www.linkedin.com/in/alessio-falai" style="color: #6c757d" onmouseover="this.style.color='#007bb5'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-linkedin-in fa-1x"></i>
+    </a>
+
+</div>
+<small id="attribution">
+    theme <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small>
+  
+</footer>
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+
+</body>
+
+</html>

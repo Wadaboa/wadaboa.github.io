@@ -131,5 +131,3 @@ In order to make everything work, you will also need to create two new branches:
 When you will perform a push on the `release` branch, Travis CI will be _triggered_ and your _build_ will start. If anything goes wrong, you will receive a **notification** on your Github-associated email, otherwise you will see a push on the `master` branch, made by `traviscibot`, and your updated website will be **live**.
 
 Remember that the `master` branch is where Travis CI will copy the static files associated with your Jekyll website. These static files are generated inside the `_site` folder in the root of your project when you perform a `bundle exec jekyll build` operation and they should not be present in your `release` branch, hence you should always add `_site/` to your `.gitignore` file.
-
-TEST

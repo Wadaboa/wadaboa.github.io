@@ -163,14 +163,14 @@
 
 <h3 id="what-is-travis-ci">What is Travis CI?</h3>
 
-<p><a href="https://travis-ci.org/">Travis CI</a> is a tool used to automate some repetitive programming tasks, which fall under the category known as <em>DevOps</em>.</p>
+<p><a href="https://travis-ci.com/">Travis CI</a> is a tool used to automate some repetitive programming tasks, which fall under the category known as <em>DevOps</em>.</p>
 
 <p>In our example, how could Travis CI help us? Well, if you are using a Jekyll Github-hosted remote theme and you want to <strong>extend it</strong> with new functionalities, such as new plugins, you may want to locally build your Jekyll project and then directly push the generated static files to Github pages, in order to let it serve those files without the need to perform <strong>build operations</strong>. This operation is actually needed when you want to work with <strong>non-safe plugins</strong>, i.e. plugins which are not supported by the build process of Github pages. Examples of such plugins are <code class="highlighter-rouge">jekyll-analytics</code> and <code class="highlighter-rouge">jekyll-sitemap</code>.</p>
 
 <p>In order to work with Travis CI, we need to follow some simple steps:</p>
 
 <ul>
-  <li>Head over to the <a href="https://travis-ci.org/">Travis CI website</a> and sign-in using <strong>Github</strong>
+  <li>Head over to the <a href="https://travis-ci.com/">Travis CI website</a> and sign-in using <strong>Github</strong>
 </li>
   <li>Click on your profile picture in the top right of your <em>Travis Dashboard</em>, click <em>Settings</em> and then the green <em>Activate</em> button, and select the repositories you want to use with Travis CI (in this example we have to select our <code class="highlighter-rouge">&lt;username&gt;.github.io</code>)</li>
   <li>On Github, click on your profile picture in the top right → <em>Settings</em> → <em>Developer settings</em> → <em>Personal access tokens</em> → <em>Generate new token</em>, then add a <em>Travis CI</em> entry with the <code class="highlighter-rouge">repo</code> scopes and copy the corresponding token</li>

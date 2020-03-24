@@ -1,6 +1,7 @@
 function get_tools(repo) {
 	fetch(`https://api.github.com/repos/${repo}/topics`, {
 		headers: {
+			"Access-Control-Allow-Origin": "*",
 			Accept: "application/vnd.github.mercy-preview+json"
 		}
 	})

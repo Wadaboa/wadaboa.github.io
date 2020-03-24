@@ -1,92 +1,3 @@
-<!DOCTYPE html>
-
-<!--
-  portfolYOU Jekyll theme by Youssef Raafat
-  Free for personal and commercial use under the MIT license
-  https://github.com/YoussefRaafatNasry/portfolYOU
--->
-
-<html lang="en" class="h-100">
-
-<head>
-
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content=""I love keyboards :keyboard:,  open-source software :penguin: and  learning something new everyday :open_book:."">
-
-  <title>Alessio Falai</title>
-  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
-
-  <!-- Font Awesome CDN -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-
-  <!-- Bootstrap CSS CDN -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
-  <!-- Animate CSS CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" type="text/css"/>
-  
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
-
-
-    <!-- Google Analytics -->
-    <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-161544643-1', 'auto');
-	ga('send', 'pageview', { 'page': location.pathname + location.search + location.hash});
-	ga('set', 'anonymizeIp', false);
-    </script>
-    <!-- End Google Analytics -->
-    </head>
-
-
-<body class="d-flex flex-column h-100">
-
-  <main class="flex-shrink-0 container mt-5">
-  <nav class="navbar navbar-expand-lg navbar-light">
-
-  <a class="navbar-brand" href="/"><h5><b>Alessio Falai</b></h5></a>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav ml-auto">
-<a class="nav-item nav-link " href="/projects/">Projects</a>
-
-      <a class="nav-item nav-link active" href="/blog/">Blog</a>
-
-      <a class="nav-item nav-link " href="/about/">About</a>
-
-      <a class="nav-item nav-link " href="/experience/">Experience</a>
-
-      
-
-    </div>
-  </div>
-
-</nav>
-  <div class="col-lg-10 mx-auto mt-5 post">
-  <h1><b>Propositional logic</b></h1>
-
-<p class="post-metadata text-muted">
-  31 January 2020 -  
-  <b>4 mins read time</b>
-
-  <br>Tags: 
-    
-    <a class="text-decoration-none no-underline" href="/blog/tags#logic">
-      <span class="tag badge badge-pill text-primary border border-primary">Logic</span>
-    </a>
-    </p>
-
 <script type="text/x-mathjax-config">
 	MathJax.Hub.Config({
 	  tex2jax: {
@@ -106,7 +17,7 @@
 	<p>The action of thinking about something in a logical, sensible way</p>
 </blockquote>
 
-<p>In propositional logic we can describe and manipulate some easy expressions in order to model a certain real-world scenario and make <strong>inferences</strong>, i.e. <em>deductions</em>, in that specific model.<br>
+<p>In propositional logic we can describe and manipulate some easy expressions in order to model a certain real-world scenario and make <strong>inferences</strong>, i.e. <em>deductions</em>, in that specific model.<br />
 In <strong>classical propositional logic</strong> everything we can model are “imperative” sentences, like “3 is a prime number”.
 Usually, what we do is we assign a “name” to the sentences we are interested in and we try to derive some conclusions.</p>
 
@@ -121,12 +32,9 @@ Usually, what we do is we assign a “name” to the sentences we are interested
 <p>In propositional logic, we can define an alphabet to work with, which is composed by:</p>
 
 <ul>
-  <li>
-<strong>Propositional symbols</strong> $ A, B, C, … $</li>
-  <li>
-<strong>Logical connectives</strong> $ \lnot, \wedge, \vee and \to $</li>
-  <li>
-<strong>Logical constants</strong> $ \bot $ (<em>verum</em>) and $ \top $ (<em>falsum</em>)</li>
+  <li><strong>Propositional symbols</strong> $ A, B, C, … $</li>
+  <li><strong>Logical connectives</strong> $ \lnot, \wedge, \vee and \to $</li>
+  <li><strong>Logical constants</strong> $ \bot $ (<em>verum</em>) and $ \top $ (<em>falsum</em>)</li>
 </ul>
 
 <p>The propositional symbols are those “names” that we assign to interesting elementary sentences, which can be combined together by using the logical connectives.</p>
@@ -139,7 +47,7 @@ Usually, what we do is we assign a “name” to the sentences we are interested
   <li>Every sequence $ \phi \square \psi $ is a formula, where $ \phi $ and $ \psi $ are formulas and $ \square $ could be $ \wedge, \vee $ or $ \to $</li>
 </ol>
 
-<p>Everything we talked about so far regards the <strong>syntax</strong> of a propositional logic language, while for the <strong>semantics</strong>, i.e. the <em>meaning</em>, we can introduce a valuation function which takes a formula and returns a boolean value, either 0 (false) or 1 (true).<br>
+<p>Everything we talked about so far regards the <strong>syntax</strong> of a propositional logic language, while for the <strong>semantics</strong>, i.e. the <em>meaning</em>, we can introduce a valuation function which takes a formula and returns a boolean value, either 0 (false) or 1 (true).<br />
 Let $ v $ be a <strong>valuation function</strong> such that:</p>
 
 <ul>
@@ -151,7 +59,7 @@ Let $ v $ be a <strong>valuation function</strong> such that:</p>
   <li>$ \lnot v(\phi) = 1 - v(\phi) $</li>
 </ul>
 
-<p>So, by assigning a boolean value to every propositional symbol (this is called <strong>interpretation</strong>) we can obtain a valuation for an entire non-atomic formula.<br>
+<p>So, by assigning a boolean value to every propositional symbol (this is called <strong>interpretation</strong>) we can obtain a valuation for an entire non-atomic formula.<br />
 Related to the interpretation of a formula, this could have one of the following instrinsic properties:</p>
 
 <ul>
@@ -160,78 +68,19 @@ Related to the interpretation of a formula, this could have one of the following
   <li>A formula is <strong>unsatisfiable</strong> (<strong>inconsistent</strong>) iff it is false under every interpretation</li>
 </ul>
 
-<p>The problem of deciding whether a formula is satisfiable, valid or unsatisfiable is an important topic in logic overall. In propositional logic, this problem is <em>decidible</em>, i.e. there exists an effective procedure to determine if a formula is consistent or not, since there are only a finite number of different interpretations to try ($ 2^{N} $, where $ N $ is the number of propositional symbols in use).<br>
+<p>The problem of deciding whether a formula is satisfiable, valid or unsatisfiable is an important topic in logic overall. In propositional logic, this problem is <em>decidible</em>, i.e. there exists an effective procedure to determine if a formula is consistent or not, since there are only a finite number of different interpretations to try ($ 2^{N} $, where $ N $ is the number of propositional symbols in use).<br />
 Moreover, the mentioned problem (<em>SAT</em> problem) is the first decision problem which was proved to belong to the complexity class of <em>NP-Complete</em> problems, by <em>Cook</em>.</p>
 
 <h3 id="inference">Inference</h3>
 
-<p>If we have some logical statements that we know to be true (our <em>knowledge base</em>), sometimes we would like to see if we can derive some conlusions from this set of formuale. This process of logical deduction is also called <strong>inference</strong> and it could be described as a form of implication, named logical consequence.<br>
-We say that the formula $ \psi $ is a <strong>logical consequence</strong> of the formula $ \phi $, and we write it as $ \phi \vDash \psi $, whenever $ \psi $ is true under every interpretation in which $ \phi $ is true (when $ \phi $ is false $ \psi $ could be anything).<br>
-We also say that two formulas are logically equivalent if they are a logical consequence of each other ($ \phi \equiv \psi $ iff $ \phi \vDash \psi $ and $ \psi \vDash \phi $).<br>
+<p>If we have some logical statements that we know to be true (our <em>knowledge base</em>), sometimes we would like to see if we can derive some conlusions from this set of formuale. This process of logical deduction is also called <strong>inference</strong> and it could be described as a form of implication, named logical consequence.<br />
+We say that the formula $ \psi $ is a <strong>logical consequence</strong> of the formula $ \phi $, and we write it as $ \phi \vDash \psi $, whenever $ \psi $ is true under every interpretation in which $ \phi $ is true (when $ \phi $ is false $ \psi $ could be anything).<br />
+We also say that two formulas are logically equivalent if they are a logical consequence of each other ($ \phi \equiv \psi $ iff $ \phi \vDash \psi $ and $ \psi \vDash \phi $).<br />
 Now, we can define two of the most important theorems in this field, which are useful for practical inference-making procedures:</p>
 
 <ul>
-  <li>
-<strong>Deduction theorem</strong>: $\phi \vDash \psi$ iff $\phi \to \psi$ is a valid formula</li>
-  <li>
-<strong>Proof by refutation</strong>: $\phi \vDash \psi$ iff $\phi \wedge \lnot\psi$ is an inconsistent formula</li>
+  <li><strong>Deduction theorem</strong>: $\phi \vDash \psi$ iff $\phi \to \psi$ is a valid formula</li>
+  <li><strong>Proof by refutation</strong>: $\phi \vDash \psi$ iff $\phi \wedge \lnot\psi$ is an inconsistent formula</li>
 </ul>
 
 <p>The first result is mostly used in derivability schemes, like <em>natural deduction</em> and <em>sequent calculus</em>, while the second one is generally used by mechanical theorem provers.</p>
-
-
-</div>
-  </main>
-
-  <footer class="mt-auto py-3 text-center">
-
-  <small class="text-muted mb-2">
-    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
-    by <strong>Alessio Falai</strong>
-  </small>
-
-  <div class="container-fluid justify-content-center">
-<a class="social mx-1" href="mailto:falai.alessio@gmail.com" style="color: #6c757d" onmouseover="this.style.color='#db4437'" onmouseout="this.style.color='#6c757d'">
-      <i class="fas fa-envelope fa-1x"></i>
-    </a><a class="social mx-1" href="https://www.facebook.com/wadaboa" style="color: #6c757d" onmouseover="this.style.color='#3b5998'" onmouseout="this.style.color='#6c757d'">
-      <i class="fab fa-facebook fa-1x"></i>
-    </a><a class="social mx-1" href="https://www.github.com/Wadaboa" style="color: #6c757d" onmouseover="this.style.color='#333333'" onmouseout="this.style.color='#6c757d'">
-      <i class="fab fa-github fa-1x"></i>
-    </a><a class="social mx-1" href="https://www.instagram.com/Wadaboa" style="color: #6c757d" onmouseover="this.style.color='#405de6'" onmouseout="this.style.color='#6c757d'">
-      <i class="fab fa-instagram fa-1x"></i>
-    </a><a class="social mx-1" href="https://www.linkedin.com/in/alessio-falai" style="color: #6c757d" onmouseover="this.style.color='#007bb5'" onmouseout="this.style.color='#6c757d'">
-      <i class="fab fa-linkedin-in fa-1x"></i>
-    </a>
-
-</div>
-<small id="attribution">
-    theme <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
-  </small>
-  
-</footer>
-  <!-- GitHub Buttons -->
-<script async defer src="https://buttons.github.io/buttons.js"></script>
-
-<!-- jQuery CDN -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-<!-- Popper.js CDN -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
-
-<!-- Bootstrap JS CDN -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-<!-- wow.js CDN & Activation -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
-<script> new WOW().init(); </script>
-
-<!-- Initialize all tooltips -->
-<script>
-$(function () {
-    $('[data-toggle="tooltip"]').tooltip()
-})
-</script>
-
-</body>
-
-</html>

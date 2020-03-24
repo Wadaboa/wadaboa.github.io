@@ -11,6 +11,11 @@ remote_theme: YoussefRaafatNasry/portfolYOU
 
 ### Build Settings ###
 plugins:
+  - jekyll-default-layout
+  - jekyll-gist
+  - jekyll-github-metadata
+  - jekyll-include-cache
+  - jekyll-paginate
   - jemoji
   - jekyll-remote-theme
   - jekyll-admin

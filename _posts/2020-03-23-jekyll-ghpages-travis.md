@@ -68,7 +68,7 @@ In order to work with Travis CI, we need to follow some simple steps:
 - Head over to the [Travis CI website](https://travis-ci.com/) and sign-in using **Github**
 - Click on your profile picture in the top right of your _Travis Dashboard_, click _Settings_ and then the green _Activate_ button, and select the repositories you want to use with Travis CI (in this example we have to select our `<username>.github.io`)
 - On Github, click on your profile picture in the top right → _Settings_ → _Developer settings_ → _Personal access tokens_ → _Generate new token_, then add a _Travis CI_ entry with the `repo` scopes and copy the corresponding token
-- On Travi CI, click on _Dashboard_ → `<username>.github.io` under _Active repositories_ → _More options_ → _Settings_ → _Environment Variables_ and set the variable `GITHUB_API_KEY` with value the **Github generated token**
+- On Travis CI, click on _Dashboard_ → `<username>.github.io` under _Active repositories_ → _More options_ → _Settings_ → _Environment Variables_ and set the variable `GITHUB_API_KEY` with value the **Github generated token**
 
 Now, you need to create a `.travis.yml` file in the root of your `<username>.github.io` repository, with the following content:
 
@@ -120,7 +120,6 @@ You will also need to create a `build` script inside a new `scripts` folder, wit
 set -e
 JEKYLL_ENV=production bundle exec jekyll build --destination _site
 touch ./_site/.nojekyll
-
 ```
 
 In order to make everything work, you will also need to create two new branches:
@@ -131,3 +130,8 @@ In order to make everything work, you will also need to create two new branches:
 When you will perform a push on the `release` branch, Travis CI will be _triggered_ and your _build_ will start. If anything goes wrong, you will receive a **notification** on your Github-associated email, otherwise you will see a push on the `master` branch, made by `traviscibot`, and your updated website will be **live**.
 
 Remember that the `master` branch is where Travis CI will copy the static files associated with your Jekyll website. These static files are generated inside the `_site` folder in the root of your project when you perform a `bundle exec jekyll build` operation and they should not be present in your `release` branch, hence you should always add `_site/` to your `.gitignore` file.
+
+**NOTE**: If you were using the [`jekyll-github-metadata`](https://github.com/jekyll/github-metadata) before using Travis CI, you will find out that this plugin no longer works after performing the described steps. To fix it, you have to do the following:
+
+1. On Github, click on your profile picture in the top right → _Settings_ → _Developer settings_ → _Personal access tokens_ → _Generate new token_, then add a _Jekyll_ entry with the `repo` scopes and copy the corresponding token
+2. On Travis CI, click on _Dashboard_ → `<username>.github.io` under _Active repositories_ → _More options_ → _Settings_ → _Environment Variables_ and set the variable `JEKYLL_GITHUB_TOKEN` with value the **Github generated token**

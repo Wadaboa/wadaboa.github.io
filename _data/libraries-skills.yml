@@ -1,19 +1,23 @@
 - name: OpenCV
-  percentage: 65
+  percentage: 70
   color: warning
 
 - name: Qt
-  percentage: 60
+  percentage: 65
   color: success
 
 - name: SciPy
-  percentage: 50
+  percentage: 60
   color: dark
 
 - name: SciKits
-  percentage: 40
+  percentage: 50
   color: danger
 
 - name: Django
-  percentage: 35
+  percentage: 50
   color: secondary
+
+- name: Spark
+  percentage: 35
+  color: info

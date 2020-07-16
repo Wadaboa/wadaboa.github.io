@@ -10,6 +10,10 @@
   percentage: 55
   color: secondary
 
+- name: Scala
+  percentage: 40
+  color: warning
+
 - name: MATLAB
   percentage: 35
   color: dark

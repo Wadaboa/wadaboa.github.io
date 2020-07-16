@@ -21,6 +21,7 @@ plugins:
   - jekyll-admin
   - jekyll-sitemap
   - jekyll-analytics
+  - jekyll-last-modified-at
 
 ### Navbar Settings ###
 nav_exclude:
@@ -89,3 +90,7 @@ jekyll_analytics:
   GoogleAnalytics:
     id: UA-161544643-1
     anonymizeIp: false
+
+### Last modified at date format ###
+last-modified-at:
+  date-format: "%d %B %Y"

@@ -19,7 +19,7 @@
   <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
 
   <!-- Font Awesome CDN -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
 
   <!-- Bootstrap CSS CDN -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -190,56 +190,56 @@ First of all, we have to define the bit quads as a <em>global dictionary</em>:</
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">BIT_QUADS</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s">'1'</span><span class="p">:</span> <span class="p">[</span>
-        <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span>
+        <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">((</span>
             <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]),</span>
             <span class="n">dtype</span><span class="o">=</span><span class="s">"int"</span>
         <span class="p">),</span>
-        <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span>
+        <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">((</span>
             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]),</span>
             <span class="n">dtype</span><span class="o">=</span><span class="s">"int"</span>
         <span class="p">),</span>
-        <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span>
+        <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">((</span>
             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
             <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]),</span>
             <span class="n">dtype</span><span class="o">=</span><span class="s">"int"</span>
         <span class="p">),</span>
-        <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span>
+        <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">((</span>
             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]),</span>
             <span class="n">dtype</span><span class="o">=</span><span class="s">"int"</span>
         <span class="p">)</span>
     <span class="p">],</span>
     <span class="s">'3'</span><span class="p">:</span> <span class="p">[</span>
-        <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span>
+        <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">((</span>
             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
             <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]),</span>
             <span class="n">dtype</span><span class="o">=</span><span class="s">"int"</span>
         <span class="p">),</span>
-        <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span>
+        <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">((</span>
             <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
             <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]),</span>
             <span class="n">dtype</span><span class="o">=</span><span class="s">"int"</span>
         <span class="p">),</span>
-        <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span>
+        <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">((</span>
             <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]),</span>
             <span class="n">dtype</span><span class="o">=</span><span class="s">"int"</span>
         <span class="p">),</span>
-        <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span>
+        <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">((</span>
             <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
             <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]),</span>
             <span class="n">dtype</span><span class="o">=</span><span class="s">"int"</span>
         <span class="p">)</span>
     <span class="p">],</span>
     <span class="s">'D'</span><span class="p">:</span> <span class="p">[</span>
-        <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span>
+        <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">((</span>
             <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]),</span>
             <span class="n">dtype</span><span class="o">=</span><span class="s">"int"</span>
         <span class="p">),</span>
-        <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span>
+        <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">((</span>
             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
             <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]),</span>
             <span class="n">dtype</span><span class="o">=</span><span class="s">"int"</span>
@@ -254,7 +254,7 @@ First of all, we have to define the bit quads as a <em>global dictionary</em>:</
     <span class="s">'''
     Return a specific connected component on a new image
     '''</span>
-    <span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+    <span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="p">.</span><span class="n">uint8</span><span class="p">)</span>
     <span class="n">mask</span><span class="p">[</span><span class="n">labels</span> <span class="o">==</span> <span class="n">label</span><span class="p">]</span> <span class="o">=</span> <span class="mi">255</span>
     <span class="k">return</span> <span class="n">mask</span>
 </code></pre></div></div>
@@ -267,12 +267,12 @@ First of all, we have to define the bit quads as a <em>global dictionary</em>:</
     containing a single connected component
     '''</span>
     <span class="n">matches</span> <span class="o">=</span> <span class="p">{</span><span class="s">'1'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'3'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">'D'</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
-    <span class="n">patches</span> <span class="o">=</span> <span class="n">get_strides</span><span class="p">((</span><span class="n">comp</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="o">/</span> <span class="mi">255</span><span class="p">),</span> <span class="n">window_size</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">quad_type</span><span class="p">,</span> <span class="n">kernels</span> <span class="ow">in</span> <span class="n">BIT_QUADS</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">patches</span> <span class="o">=</span> <span class="n">get_strides</span><span class="p">((</span><span class="n">comp</span><span class="p">.</span><span class="n">copy</span><span class="p">()</span> <span class="o">/</span> <span class="mi">255</span><span class="p">),</span> <span class="n">window_size</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">quad_type</span><span class="p">,</span> <span class="n">kernels</span> <span class="ow">in</span> <span class="n">BIT_QUADS</span><span class="p">.</span><span class="n">items</span><span class="p">():</span>
         <span class="k">for</span> <span class="n">kernel</span> <span class="ow">in</span> <span class="n">kernels</span><span class="p">:</span>
             <span class="k">for</span> <span class="n">roi</span> <span class="ow">in</span> <span class="n">patches</span><span class="p">:</span>
                 <span class="n">res</span> <span class="o">=</span> <span class="n">roi</span> <span class="o">-</span> <span class="n">kernel</span>
-                <span class="k">if</span> <span class="n">cv2</span><span class="o">.</span><span class="n">countNonZero</span><span class="p">(</span><span class="n">res</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">cv2</span><span class="p">.</span><span class="n">countNonZero</span><span class="p">(</span><span class="n">res</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
                     <span class="n">matches</span><span class="p">[</span><span class="n">quad_type</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="n">euler</span> <span class="o">=</span> <span class="n">matches</span><span class="p">[</span><span class="s">'1'</span><span class="p">]</span> <span class="o">-</span> <span class="n">matches</span><span class="p">[</span><span class="s">'3'</span><span class="p">]</span>
     <span class="n">euler</span> <span class="o">=</span> <span class="p">(</span>
@@ -290,15 +290,15 @@ First of all, we have to define the bit quads as a <em>global dictionary</em>:</
     on the original image, of the given size
     '''</span>
     <span class="n">shape</span> <span class="o">=</span> <span class="p">(</span>
-        <span class="n">img</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">window_size</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="n">img</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">window_size</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">img</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">window_size</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">img</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">window_size</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
         <span class="n">window_size</span><span class="p">,</span> <span class="n">window_size</span>
     <span class="p">)</span>
-    <span class="n">strides</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">img</span><span class="o">.</span><span class="n">strides</span>
-    <span class="n">patches</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">lib</span><span class="o">.</span><span class="n">stride_tricks</span><span class="o">.</span><span class="n">as_strided</span><span class="p">(</span>
+    <span class="n">strides</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">img</span><span class="p">.</span><span class="n">strides</span>
+    <span class="n">patches</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">lib</span><span class="p">.</span><span class="n">stride_tricks</span><span class="p">.</span><span class="n">as_strided</span><span class="p">(</span>
         <span class="n">img</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="n">shape</span><span class="p">,</span> <span class="n">strides</span><span class="o">=</span><span class="n">strides</span>
     <span class="p">)</span>
-    <span class="n">patches</span> <span class="o">=</span> <span class="n">patches</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">window_size</span><span class="p">,</span> <span class="n">window_size</span><span class="p">)</span>
+    <span class="n">patches</span> <span class="o">=</span> <span class="n">patches</span><span class="p">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">window_size</span><span class="p">,</span> <span class="n">window_size</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">patches</span>
 </code></pre></div></div>
 
@@ -320,7 +320,7 @@ First of all, we have to define the bit quads as a <em>global dictionary</em>:</
 <p>The <code class="highlighter-rouge">holes_number</code> function calls the <code class="highlighter-rouge">get_connected_component</code> function and, for each mask image, computes the number of holes as $H = 1 - E$, where $E$ is the value returned by <code class="highlighter-rouge">euler_number</code> by matching the bit quads across the mask image. Finally, a list indexed by the blob’s label number is returned by the function, where each position contains the number of holes in that specific region.<br>
 If you don’t know how to compute the <strong>connected components</strong> in your image, the <code class="highlighter-rouge">opencv</code> library has the following method available:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">num_labels</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">stats</span><span class="p">,</span> <span class="n">centroids</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">connectedComponentsWithStats</span><span class="p">(</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">num_labels</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">stats</span><span class="p">,</span> <span class="n">centroids</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">connectedComponentsWithStats</span><span class="p">(</span>
     <span class="n">img</span><span class="p">,</span> <span class="n">connectivity</span><span class="o">=</span><span class="mi">8</span>
 <span class="p">)</span>
 </code></pre></div></div>
@@ -329,6 +329,7 @@ If you don’t know how to compute the <strong>connected components</strong> in 
 
 <p>If you have any kind of issue or doubt, feel free to comment <a href="https://github.com/Wadaboa/cv-con-rod-inspection">my project on Github</a>, which is where I actually implemented the provided Python source code.<br>
 Anyway, I know that my way of computing the Euler number is not the fastest, so I’m looking on new ways to try and improve it. I think that the bottleneck may be <em>strides</em> related.</p>
+
 
 
 </div>
@@ -360,6 +361,7 @@ Anyway, I know that my way of computing the Euler number is not the fastest, so 
   </small>
   
 </footer>
+  
   <!-- GitHub Buttons -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 

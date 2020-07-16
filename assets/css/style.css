@@ -448,6 +448,9 @@
   font-style: italic; }
 
 /* Comment.PreprocFile */
+html {
+  padding-left: calc(100vw - 100%); }
+
 body {
   font-family: "Poppins", sans-serif; }
 

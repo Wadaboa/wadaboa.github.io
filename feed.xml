@@ -5,12 +5,12 @@
 	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
 >
 	<channel>
-		<title></title>
+		<title>Alessio Falai</title>
 		<description>&quot;I love keyboards :keyboard:,  open-source software :penguin: and  learning something new everyday :open_book:.&quot;</description>		
 		<sy:updatePeriod>daily</sy:updatePeriod>
 		<sy:updateFrequency>1</sy:updateFrequency>
-		<link>alessiofalai.it</link>
-		<atom:link href="alessiofalai.it/feed.xml" rel="self" type="application/rss+xml" />
+		<link>https://alessiofalai.it</link>
+		<atom:link href="https://alessiofalai.it/feed.xml" rel="self" type="application/rss+xml" />
 		<lastBuildDate>Mon, 23 Mar 2020 00:00:00 +0000</lastBuildDate>
 		
 		
@@ -18,70 +18,44 @@
 				<title>Jekyll + Github Pages + Travis CI</title>
 				
 				
-					<description>&lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;/h3&gt;
-
-</description>
+					<description>A tutorial on how to build a static site using Jekyll and on how to automatically deploy it to Github Pages using Travis CI.</description>
 				
 				<pubDate>Mon, 23 Mar 2020 00:00:00 +0000</pubDate>
-				<link>alessiofalai.it/blog/jekyll-ghpages-travis</link>
-				<guid isPermaLink="true">alessiofalai.it/blog/jekyll-ghpages-travis</guid>
+				<link>https://alessiofalai.it/blog/jekyll-ghpages-travis</link>
+				<guid isPermaLink="true">https://alessiofalai.it/blog/jekyll-ghpages-travis</guid>
 			</item>
 		
 			<item>
 				<title>Java interfaces vs. Scala traits</title>
 				
 				
-					<description>&lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;/h3&gt;
-
-</description>
+					<description>The highlighting of some key differences between Java interfaces and the fancy Scala traits.</description>
 				
 				<pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
-				<link>alessiofalai.it/blog/scala-traits</link>
-				<guid isPermaLink="true">alessiofalai.it/blog/scala-traits</guid>
+				<link>https://alessiofalai.it/blog/scala-traits</link>
+				<guid isPermaLink="true">https://alessiofalai.it/blog/scala-traits</guid>
 			</item>
 		
 			<item>
 				<title>The Euler number in blob analysis</title>
 				
 				
-					<description>&lt;script type=&quot;text/x-mathjax-config&quot;&gt;
-	MathJax.Hub.Config({
-	  tex2jax: {
-		inlineMath: [ ['$','$'], [&quot;\\(&quot;,&quot;\\)&quot;] ],
-		processEscapes: true
-	  }
-	});
-&lt;/script&gt;
-
-&lt;script src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-
-</description>
+					<description>An in-depth look at the Euler number computation, along with a simple Python implementation, used to count the number of holes in a connected component.</description>
 				
 				<pubDate>Wed, 19 Feb 2020 00:00:00 +0000</pubDate>
-				<link>alessiofalai.it/blog/euler-number</link>
-				<guid isPermaLink="true">alessiofalai.it/blog/euler-number</guid>
+				<link>https://alessiofalai.it/blog/euler-number</link>
+				<guid isPermaLink="true">https://alessiofalai.it/blog/euler-number</guid>
 			</item>
 		
 			<item>
 				<title>Propositional logic</title>
 				
 				
-					<description>&lt;script type=&quot;text/x-mathjax-config&quot;&gt;
-	MathJax.Hub.Config({
-	  tex2jax: {
-		inlineMath: [ ['$','$'], [&quot;\\(&quot;,&quot;\\)&quot;] ],
-		processEscapes: true
-	  }
-	});
-&lt;/script&gt;
-
-&lt;script src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-
-</description>
+					<description>A broad introduction to propositional logic, the simplest possible form of reasoning.</description>
 				
 				<pubDate>Fri, 31 Jan 2020 00:00:00 +0000</pubDate>
-				<link>alessiofalai.it/blog/propositional-logic</link>
-				<guid isPermaLink="true">alessiofalai.it/blog/propositional-logic</guid>
+				<link>https://alessiofalai.it/blog/propositional-logic</link>
+				<guid isPermaLink="true">https://alessiofalai.it/blog/propositional-logic</guid>
 			</item>
 		
 	</channel>

@@ -7,7 +7,7 @@ description: >-
 url: "alessiofalai.it"
 baseurl: ""
 repository: Wadaboa/wadaboa.github.io
-remote_theme: YoussefRaafatNasry/portfolYOU
+remote_theme: YoussefRaafatNasry/portfolYOU@v2.2.1
 
 ### Build Settings ###
 plugins:

@@ -94,3 +94,8 @@ jekyll_analytics:
 ### Last modified at date format ###
 last-modified-at:
   date-format: "%d %B %Y"
+
+### RSS feed
+feed_items: 5
+feed_update_period: daily
+feed_update_frequency: 1

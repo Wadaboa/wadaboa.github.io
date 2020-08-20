@@ -19,7 +19,7 @@
   <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
 
   <!-- Font Awesome CDN -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 
   <!-- Bootstrap CSS CDN -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -78,7 +78,7 @@
 
 <p class="post-metadata text-muted">
   23 March 2020 -  
-  <b>7 mins read time</b>
+  <b>8 mins read time</b>
 
   <br>Tags: 
     
@@ -106,58 +106,58 @@
 <strong>Static</strong>: The only files you should have to deal with are HTML, CSS and Markdown</li>
 </ul>
 
-<p>Jekyll uses the so-called <a href="https://github.com/Shopify/liquid"><code class="highlighter-rouge">Liquid</code></a> template engine, developed by <strong>Shopify</strong>, which we can exploit to inject some logic into our static files. Liquid is based upon two types of markup:</p>
+<p>Jekyll uses the so-called <a href="https://github.com/Shopify/liquid"><code class="language-plaintext highlighter-rouge">Liquid</code></a> template engine, developed by <strong>Shopify</strong>, which we can exploit to inject some logic into our static files. Liquid is based upon two types of markup:</p>
 
 <ul>
   <li>
-<em>Output</em>: A set of double curly braces containing an <strong>expression</strong>; when the template is rendered, it gets replaced with the value of that expression (e.g. <code class="highlighter-rouge">Hello {{ user.name }}</code>)</li>
+<em>Output</em>: A set of double curly braces containing an <strong>expression</strong>; when the template is rendered, it gets replaced with the value of that expression (e.g. <code class="language-plaintext highlighter-rouge">Hello {{ user.name }}</code>)</li>
   <li>
-<em>Tag</em>: A set of matching curly braces and percent signs, used for the <strong>logic</strong> in your template (e.g. <code class="highlighter-rouge">{% if &lt;CONDITION&gt; %} ... {% endif %}</code>)</li>
+<em>Tag</em>: A set of matching curly braces and percent signs, used for the <strong>logic</strong> in your template (e.g. <code class="language-plaintext highlighter-rouge">{% if &lt;CONDITION&gt; %} ... {% endif %}</code>)</li>
 </ul>
 
-<p>Jekyll has an extensive <strong>theme system</strong>, which we can leverage to build good-looking websites effortlessly. My personal favorite Github-hosted theme is <a href="https://github.com/YoussefRaafatNasry/portfolYOU"><code class="highlighter-rouge">PortfolYOU</code></a>, which is the one I am using right now on the website you’re on.</p>
+<p>Jekyll has an extensive <strong>theme system</strong>, which we can leverage to build good-looking websites effortlessly. My personal favorite Github-hosted theme is <a href="https://github.com/YoussefRaafatNasry/portfolYOU"><code class="language-plaintext highlighter-rouge">PortfolYOU</code></a>, which is the one I am using right now on the website you’re on.</p>
 
 <p>Jekyll sites can also be enriched by <strong>plugins</strong>. You can browse for some good ones <a href="https://github.com/planetjekyll/awesome-jekyll-plugins">here</a>. My personal favorites are the following ones:</p>
 
 <ul>
   <li>
-<a href="https://github.com/jekyll/jemoji"><code class="highlighter-rouge">jemoji</code></a>: GitHub-flavored <strong>emoji</strong> plugin for Jekyll</li>
+<a href="https://github.com/jekyll/jemoji"><code class="language-plaintext highlighter-rouge">jemoji</code></a>: GitHub-flavored <strong>emoji</strong> plugin for Jekyll</li>
   <li>
-<a href="https://github.com/benbalter/jekyll-remote-theme"><code class="highlighter-rouge">jekyll-remote-theme</code></a>: Jekyll plugin for building Jekyll sites with any GitHub-hosted theme</li>
+<a href="https://github.com/benbalter/jekyll-remote-theme"><code class="language-plaintext highlighter-rouge">jekyll-remote-theme</code></a>: Jekyll plugin for building Jekyll sites with any GitHub-hosted theme</li>
   <li>
-<a href="https://github.com/jekyll/jekyll-admin"><code class="highlighter-rouge">jekyll-admin</code></a>: A Jekyll plugin that provides users with a traditional <strong>CMS-style graphical interface</strong> to author content and administer Jekyll sites</li>
+<a href="https://github.com/jekyll/jekyll-admin"><code class="language-plaintext highlighter-rouge">jekyll-admin</code></a>: A Jekyll plugin that provides users with a traditional <strong>CMS-style graphical interface</strong> to author content and administer Jekyll sites</li>
   <li>
-<a href="https://github.com/jekyll/jekyll-sitemap"><code class="highlighter-rouge">jekyll-sitemap</code></a>: Jekyll plugin to silently generate a <strong>sitemaps.org</strong> compliant sitemap for your Jekyll site</li>
+<a href="https://github.com/jekyll/jekyll-sitemap"><code class="language-plaintext highlighter-rouge">jekyll-sitemap</code></a>: Jekyll plugin to silently generate a <strong>sitemaps.org</strong> compliant sitemap for your Jekyll site</li>
   <li>
-<a href="https://github.com/hendrikschneider/jekyll-analytics"><code class="highlighter-rouge">jekyll-analytics</code></a>: Plugin to easily add <strong>webanalytics</strong> to your jekyll site. Currently Google Analytics, Piwik and mPulse are supported.</li>
+<a href="https://github.com/hendrikschneider/jekyll-analytics"><code class="language-plaintext highlighter-rouge">jekyll-analytics</code></a>: Plugin to easily add <strong>webanalytics</strong> to your jekyll site. Currently Google Analytics, Piwik and mPulse are supported.</li>
 </ul>
 
 <p>If you want to create a local Jekyll project you can open a command-line window and do the following:</p>
 
 <ol>
-  <li>Make sure you have <code class="highlighter-rouge">Ruby</code> installed on your system</li>
-  <li>Run <code class="highlighter-rouge">gem install bundler jekyll</code>
+  <li>Make sure you have <code class="language-plaintext highlighter-rouge">Ruby</code> installed on your system</li>
+  <li>Run <code class="language-plaintext highlighter-rouge">gem install bundler jekyll</code>
 </li>
-  <li>Run <code class="highlighter-rouge">jekyll new my-site &amp;&amp; cd my-site</code>
+  <li>Run <code class="language-plaintext highlighter-rouge">jekyll new my-site &amp;&amp; cd my-site</code>
 </li>
-  <li>Run <code class="highlighter-rouge">bundle exec jekyll serve</code>
+  <li>Run <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code>
 </li>
 </ol>
 
-<p>This will run your <code class="highlighter-rouge">my-site</code> locally at <code class="highlighter-rouge">http://localhost:4000</code>, so that you can open a browser and see what’s happening.</p>
+<p>This will run your <code class="language-plaintext highlighter-rouge">my-site</code> locally at <code class="language-plaintext highlighter-rouge">http://localhost:4000</code>, so that you can open a browser and see what’s happening.</p>
 
 <p>That’s pretty much all you have to know to work with Jekyll. Next up, we have to host our website on a specific provider to make it accessible on the internet, and here is where <strong>Github pages</strong> comes in handy.</p>
 
 <h3 id="what-is-github-pages">What is Github pages?</h3>
 
-<p><a href="https://pages.github.com/">Github pages</a> is a free hosting service provided by the Github organization. With it, you can create one personal website with just a few clicks, which will be live at the URL <code class="highlighter-rouge">&lt;username&gt;.github.io</code>. To start, you have to do the following:</p>
+<p><a href="https://pages.github.com/">Github pages</a> is a free hosting service provided by the Github organization. With it, you can create one personal website with just a few clicks, which will be live at the URL <code class="language-plaintext highlighter-rouge">&lt;username&gt;.github.io</code>. To start, you have to do the following:</p>
 
 <ol>
-  <li>Create a public repository and name it <code class="highlighter-rouge">&lt;username&gt;.github.io</code>, where <code class="highlighter-rouge">&lt;username&gt;</code> is your lowercase Github username (e.g. my Github username is <strong>Wadaboa</strong> and my Github pages repo is named <code class="highlighter-rouge">wadaboa.github.io</code>)</li>
-  <li>Head over to the new repo settings and flag <em>“Enforce HTTPS”</em> if it is unflagged. Then, optionally write a custom domain, other than <code class="highlighter-rouge">&lt;username&gt;.github.io</code>, inside the <em>“Custom domain”</em> field (note that this will require to modify some <a href="https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site">DNS settings</a> on your custom domain provider)</li>
+  <li>Create a public repository and name it <code class="language-plaintext highlighter-rouge">&lt;username&gt;.github.io</code>, where <code class="language-plaintext highlighter-rouge">&lt;username&gt;</code> is your lowercase Github username (e.g. my Github username is <strong>Wadaboa</strong> and my Github pages repo is named <code class="language-plaintext highlighter-rouge">wadaboa.github.io</code>)</li>
+  <li>Head over to the new repo settings and flag <em>“Enforce HTTPS”</em> if it is unflagged. Then, optionally write a custom domain, other than <code class="language-plaintext highlighter-rouge">&lt;username&gt;.github.io</code>, inside the <em>“Custom domain”</em> field (note that this will require to modify some <a href="https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site">DNS settings</a> on your custom domain provider)</li>
 </ol>
 
-<p>You are good to go. Now, all you have to do is download a Jekyll theme, or build a Jekyll website from scratch, as described above, and upload those files to the <code class="highlighter-rouge">master</code> branch of your Github pages repo.</p>
+<p>You are good to go. Now, all you have to do is download a Jekyll theme, or build a Jekyll website from scratch, as described above, and upload those files to the <code class="language-plaintext highlighter-rouge">master</code> branch of your Github pages repo.</p>
 
 <p>So, why is <strong>Travis CI</strong> needed if the entire deployment is already done by Github pages? We shall see where a <strong>Continuos Integration</strong> pipeline turns out useful in the next section.</p>
 
@@ -165,20 +165,20 @@
 
 <p><a href="https://travis-ci.com/">Travis CI</a> is a tool used to automate some repetitive programming tasks, which fall under the category known as <em>DevOps</em>.</p>
 
-<p>In our example, how could Travis CI help us? Well, if you are using a Jekyll Github-hosted remote theme and you want to <strong>extend it</strong> with new functionalities, such as new plugins, you may want to locally build your Jekyll project and then directly push the generated static files to Github pages, in order to let it serve those files without the need to perform <strong>build operations</strong>. This operation is actually needed when you want to work with <strong>non-safe plugins</strong>, i.e. plugins which are not supported by the build process of Github pages. Examples of such plugins are <code class="highlighter-rouge">jekyll-analytics</code> and <code class="highlighter-rouge">jekyll-sitemap</code>.</p>
+<p>In our example, how could Travis CI help us? Well, if you are using a Jekyll Github-hosted remote theme and you want to <strong>extend it</strong> with new functionalities, such as new plugins, you may want to locally build your Jekyll project and then directly push the generated static files to Github pages, in order to let it serve those files without the need to perform <strong>build operations</strong>. This operation is actually needed when you want to work with <strong>non-safe plugins</strong>, i.e. plugins which are not supported by the build process of Github pages. Examples of such plugins are <code class="language-plaintext highlighter-rouge">jekyll-analytics</code> and <code class="language-plaintext highlighter-rouge">jekyll-sitemap</code>.</p>
 
 <p>In order to work with Travis CI, we need to follow some simple steps:</p>
 
 <ul>
   <li>Head over to the <a href="https://travis-ci.com/">Travis CI website</a> and sign-in using <strong>Github</strong>
 </li>
-  <li>Click on your profile picture in the top right of your <em>Travis Dashboard</em>, click <em>Settings</em> and then the green <em>Activate</em> button, and select the repositories you want to use with Travis CI (in this example we have to select our <code class="highlighter-rouge">&lt;username&gt;.github.io</code>)</li>
-  <li>On Github, click on your profile picture in the top right → <em>Settings</em> → <em>Developer settings</em> → <em>Personal access tokens</em> → <em>Generate new token</em>, then add a <em>Travis CI</em> entry with the <code class="highlighter-rouge">repo</code> scopes and copy the corresponding token</li>
-  <li>On Travis CI, click on <em>Dashboard</em> → <code class="highlighter-rouge">&lt;username&gt;.github.io</code> under <em>Active repositories</em> → <em>More options</em> → <em>Settings</em> → <em>Environment Variables</em> and set the variable <code class="highlighter-rouge">GITHUB_API_KEY</code> with value the <strong>Github generated token</strong>
+  <li>Click on your profile picture in the top right of your <em>Travis Dashboard</em>, click <em>Settings</em> and then the green <em>Activate</em> button, and select the repositories you want to use with Travis CI (in this example we have to select our <code class="language-plaintext highlighter-rouge">&lt;username&gt;.github.io</code>)</li>
+  <li>On Github, click on your profile picture in the top right → <em>Settings</em> → <em>Developer settings</em> → <em>Personal access tokens</em> → <em>Generate new token</em>, then add a <em>Travis CI</em> entry with the <code class="language-plaintext highlighter-rouge">repo</code> scopes and copy the corresponding token</li>
+  <li>On Travis CI, click on <em>Dashboard</em> → <code class="language-plaintext highlighter-rouge">&lt;username&gt;.github.io</code> under <em>Active repositories</em> → <em>More options</em> → <em>Settings</em> → <em>Environment Variables</em> and set the variable <code class="language-plaintext highlighter-rouge">GITHUB_API_KEY</code> with value the <strong>Github generated token</strong>
 </li>
 </ul>
 
-<p>Now, you need to create a <code class="highlighter-rouge">.travis.yml</code> file in the root of your <code class="highlighter-rouge">&lt;username&gt;.github.io</code> repository, with the following content:</p>
+<p>Now, you need to create a <code class="language-plaintext highlighter-rouge">.travis.yml</code> file in the root of your <code class="language-plaintext highlighter-rouge">&lt;username&gt;.github.io</code> repository, with the following content:</p>
 
 <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">language</span><span class="pi">:</span> <span class="s">ruby</span>
 <span class="na">rvm</span><span class="pi">:</span>
@@ -219,7 +219,7 @@
     <span class="na">on_failure</span><span class="pi">:</span> <span class="s">always</span>
 </code></pre></div></div>
 
-<p>You will also need to create a <code class="highlighter-rouge">build</code> script inside a new <code class="highlighter-rouge">scripts</code> folder, with the following content:</p>
+<p>You will also need to create a <code class="language-plaintext highlighter-rouge">build</code> script inside a new <code class="language-plaintext highlighter-rouge">scripts</code> folder, with the following content:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/usr/bin/env bash</span>
 
@@ -232,23 +232,22 @@
 
 <ul>
   <li>
-<code class="highlighter-rouge">develop</code>, which will contain <strong>works-in-progress</strong>, not ready to be published</li>
+<code class="language-plaintext highlighter-rouge">develop</code>, which will contain <strong>works-in-progress</strong>, not ready to be published</li>
   <li>
-<code class="highlighter-rouge">release</code>, which will contain the <strong>latest</strong> published website</li>
+<code class="language-plaintext highlighter-rouge">release</code>, which will contain the <strong>latest</strong> published website</li>
 </ul>
 
-<p>When you will perform a push on the <code class="highlighter-rouge">release</code> branch, Travis CI will be <em>triggered</em> and your <em>build</em> will start. If anything goes wrong, you will receive a <strong>notification</strong> on your Github-associated email, otherwise you will see a push on the <code class="highlighter-rouge">master</code> branch, made by <code class="highlighter-rouge">traviscibot</code>, and your updated website will be <strong>live</strong>.</p>
+<p>When you will perform a push on the <code class="language-plaintext highlighter-rouge">release</code> branch, Travis CI will be <em>triggered</em> and your <em>build</em> will start. If anything goes wrong, you will receive a <strong>notification</strong> on your Github-associated email, otherwise you will see a push on the <code class="language-plaintext highlighter-rouge">master</code> branch, made by <code class="language-plaintext highlighter-rouge">traviscibot</code>, and your updated website will be <strong>live</strong>.</p>
 
-<p>Remember that the <code class="highlighter-rouge">master</code> branch is where Travis CI will copy the static files associated with your Jekyll website. These static files are generated inside the <code class="highlighter-rouge">_site</code> folder in the root of your project when you perform a <code class="highlighter-rouge">bundle exec jekyll build</code> operation and they should not be present in your <code class="highlighter-rouge">release</code> branch, hence you should always add <code class="highlighter-rouge">_site/</code> to your <code class="highlighter-rouge">.gitignore</code> file.</p>
+<p>Remember that the <code class="language-plaintext highlighter-rouge">master</code> branch is where Travis CI will copy the static files associated with your Jekyll website. These static files are generated inside the <code class="language-plaintext highlighter-rouge">_site</code> folder in the root of your project when you perform a <code class="language-plaintext highlighter-rouge">bundle exec jekyll build</code> operation and they should not be present in your <code class="language-plaintext highlighter-rouge">release</code> branch, hence you should always add <code class="language-plaintext highlighter-rouge">_site/</code> to your <code class="language-plaintext highlighter-rouge">.gitignore</code> file.</p>
 
-<p><strong>NOTE</strong>: If you were using the <a href="https://github.com/jekyll/github-metadata"><code class="highlighter-rouge">jekyll-github-metadata</code></a> before using Travis CI, you will find out that this plugin no longer works after performing the described steps. To fix it, you have to do the following:</p>
+<p><strong>NOTE</strong>: If you were using the <a href="https://github.com/jekyll/github-metadata"><code class="language-plaintext highlighter-rouge">jekyll-github-metadata</code></a> before using Travis CI, you will find out that this plugin no longer works after performing the described steps. To fix it, you have to do the following:</p>
 
 <ol>
-  <li>On Github, click on your profile picture in the top right → <em>Settings</em> → <em>Developer settings</em> → <em>Personal access tokens</em> → <em>Generate new token</em>, then add a <em>Jekyll</em> entry with the <code class="highlighter-rouge">repo</code> scopes and copy the corresponding token</li>
-  <li>On Travis CI, click on <em>Dashboard</em> → <code class="highlighter-rouge">&lt;username&gt;.github.io</code> under <em>Active repositories</em> → <em>More options</em> → <em>Settings</em> → <em>Environment Variables</em> and set the variable <code class="highlighter-rouge">JEKYLL_GITHUB_TOKEN</code> with value the <strong>Github generated token</strong>
+  <li>On Github, click on your profile picture in the top right → <em>Settings</em> → <em>Developer settings</em> → <em>Personal access tokens</em> → <em>Generate new token</em>, then add a <em>Jekyll</em> entry with the <code class="language-plaintext highlighter-rouge">repo</code> scopes and copy the corresponding token</li>
+  <li>On Travis CI, click on <em>Dashboard</em> → <code class="language-plaintext highlighter-rouge">&lt;username&gt;.github.io</code> under <em>Active repositories</em> → <em>More options</em> → <em>Settings</em> → <em>Environment Variables</em> and set the variable <code class="language-plaintext highlighter-rouge">JEKYLL_GITHUB_TOKEN</code> with value the <strong>Github generated token</strong>
 </li>
 </ol>
-
 
 
 </div>
@@ -284,7 +283,6 @@
   
 
 
-  
   <!-- GitHub Buttons -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
@@ -300,6 +298,9 @@
 <!-- wow.js CDN & Activation -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
 <script> new WOW().init(); </script>
+
+<!-- Card Animation jQuery -->
+<script src="/assets/js/card-animation.js"></script>
 
 <!-- Initialize all tooltips -->
 <script>

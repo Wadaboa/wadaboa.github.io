@@ -19,7 +19,7 @@
   <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
 
   <!-- Font Awesome CDN -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 
   <!-- Bootstrap CSS CDN -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -95,11 +95,11 @@
 
 <p>In <strong>Java</strong>, an <strong>interface</strong> is very similar to an abstract class, with the following main differences:</p>
 <ul>
-  <li>Interfaces are declared using the <code class="highlighter-rouge">interface</code> keyword, rather than the <code class="highlighter-rouge">class</code> keyword</li>
-  <li>A class can implement an interface using the <code class="highlighter-rouge">implements</code> keyword, rather than the <code class="highlighter-rouge">extends</code> keyword</li>
+  <li>Interfaces are declared using the <code class="language-plaintext highlighter-rouge">interface</code> keyword, rather than the <code class="language-plaintext highlighter-rouge">class</code> keyword</li>
+  <li>A class can implement an interface using the <code class="language-plaintext highlighter-rouge">implements</code> keyword, rather than the <code class="language-plaintext highlighter-rouge">extends</code> keyword</li>
   <li>Functions are declared as abstract methods, i.e. they don’t provide an implementation</li>
-  <li>Functions are automatically declared with the <code class="highlighter-rouge">public</code> visibility</li>
-  <li>Variables are automatically declared as <code class="highlighter-rouge">public</code>, <code class="highlighter-rouge">static</code> and <code class="highlighter-rouge">final</code>, since an interface cannot be directly instantiated</li>
+  <li>Functions are automatically declared with the <code class="language-plaintext highlighter-rouge">public</code> visibility</li>
+  <li>Variables are automatically declared as <code class="language-plaintext highlighter-rouge">public</code>, <code class="language-plaintext highlighter-rouge">static</code> and <code class="language-plaintext highlighter-rouge">final</code>, since an interface cannot be directly instantiated</li>
 </ul>
 
 <p>The cool thing about interfaces is that they provide a way to perform a sort of <em>multiple inheritance</em>, since a class can implement more than one interface, while also eventually extending a single class. For example:</p>
@@ -135,7 +135,7 @@
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">B</span> <span class="kd">implements</span> <span class="nf">A</span><span class="o">()</span> <span class="o">{</span> <span class="o">...</span> <span class="o">}</span>
 </code></pre></div></div>
 
-<p>Another useful addition is in the so called <code class="highlighter-rouge">default</code> methods, which are a good way to provide default implementations of some interface functions. In this way, classes that implement that specific interface are not obliged to provide the actual code to perform that operation, to be declared as concrete classes. Obviously, this feature is mostly related to the scalability of an interface, rather than to its core operations, since the best practice for a class implementing that interface will always be to provide its specific implementation of the default method.</p>
+<p>Another useful addition is in the so called <code class="language-plaintext highlighter-rouge">default</code> methods, which are a good way to provide default implementations of some interface functions. In this way, classes that implement that specific interface are not obliged to provide the actual code to perform that operation, to be declared as concrete classes. Obviously, this feature is mostly related to the scalability of an interface, rather than to its core operations, since the best practice for a class implementing that interface will always be to provide its specific implementation of the default method.</p>
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">A</span> <span class="o">{</span>
     <span class="k">default</span> <span class="kt">boolean</span> <span class="nf">foo</span><span class="o">()</span> <span class="o">{</span>
         <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
@@ -151,7 +151,7 @@
 <span class="o">}</span>
 </code></pre></div></div>
 
-<p>Scala traits could be seen as rich interfaces, since they provide a way to implement both abstract and <strong>non-abstract</strong> function definitions, out of the box. For example, we could have the following definition, without the need of using the <code class="highlighter-rouge">default</code> keyword, as in Java 8:</p>
+<p>Scala traits could be seen as rich interfaces, since they provide a way to implement both abstract and <strong>non-abstract</strong> function definitions, out of the box. For example, we could have the following definition, without the need of using the <code class="language-plaintext highlighter-rouge">default</code> keyword, as in Java 8:</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">trait</span> <span class="nc">A</span> <span class="o">{</span>
     <span class="k">def</span> <span class="nf">foo</span><span class="o">()</span> <span class="k">=</span> <span class="nf">println</span><span class="o">(</span><span class="s">"foo"</span><span class="o">)</span>
 <span class="o">}</span>
@@ -181,10 +181,10 @@
 <span class="o">}</span>
 </code></pre></div></div>
 
-<p>Alternatively to <code class="highlighter-rouge">class C() extends A with B</code>, we could have also written <code class="highlighter-rouge">class C() with A with B</code>.<br>
-Beware that the <strong>order</strong> in which traits are listed actually matters, since the last trait will be considered first in case of traits that override methods (in our example, calling <code class="highlighter-rouge">foo()</code> on an instance of type <code class="highlighter-rouge">C</code> will print out “<em>bar</em>” instead of “<em>foo</em>”).</p>
+<p>Alternatively to <code class="language-plaintext highlighter-rouge">class C() extends A with B</code>, we could have also written <code class="language-plaintext highlighter-rouge">class C() with A with B</code>.<br>
+Beware that the <strong>order</strong> in which traits are listed actually matters, since the last trait will be considered first in case of traits that override methods (in our example, calling <code class="language-plaintext highlighter-rouge">foo()</code> on an instance of type <code class="language-plaintext highlighter-rouge">C</code> will print out “<em>bar</em>” instead of “<em>foo</em>”).</p>
 
-<p>A very useful thing which distinguishes Java 8 interfaces with default methods w.r.t. Scala traits is that the latter provide the so called <strong>dynamic binding</strong> of <code class="highlighter-rouge">super</code>: the <code class="highlighter-rouge">super</code> keyword can be used inside a trait to refer to the superclass of the class implementing the trait. Obviously, the <code class="highlighter-rouge">super</code> keyword cannot be <em>statically interpreted</em> because the trait can be mixed-in different classes, with different superclasses; so, it has to be <em>dinamically bound</em> to the superclass of the mixed-in class. For example:</p>
+<p>A very useful thing which distinguishes Java 8 interfaces with default methods w.r.t. Scala traits is that the latter provide the so called <strong>dynamic binding</strong> of <code class="language-plaintext highlighter-rouge">super</code>: the <code class="language-plaintext highlighter-rouge">super</code> keyword can be used inside a trait to refer to the superclass of the class implementing the trait. Obviously, the <code class="language-plaintext highlighter-rouge">super</code> keyword cannot be <em>statically interpreted</em> because the trait can be mixed-in different classes, with different superclasses; so, it has to be <em>dinamically bound</em> to the superclass of the mixed-in class. For example:</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">trait</span> <span class="nc">A</span> <span class="o">{</span>
     <span class="k">def</span> <span class="nf">foo</span><span class="o">()</span> <span class="k">=</span> <span class="nf">println</span><span class="o">(</span><span class="nv">super</span><span class="o">.</span><span class="py">toString</span><span class="o">)</span>
 <span class="o">}</span>
@@ -197,10 +197,9 @@ Beware that the <strong>order</strong> in which traits are listed actually matte
     <span class="k">override</span> <span class="k">def</span> <span class="nf">toString</span> <span class="k">=</span> <span class="s">"Derived class"</span>
 <span class="o">}</span>
 </code></pre></div></div>
-<p>In this example, calling <code class="highlighter-rouge">foo()</code> on an instance of <code class="highlighter-rouge">class C</code> will actually print out “<em>Superclass</em>”.</p>
+<p>In this example, calling <code class="language-plaintext highlighter-rouge">foo()</code> on an instance of <code class="language-plaintext highlighter-rouge">class C</code> will actually print out “<em>Superclass</em>”.</p>
 
 <p>These tools give the programmer an easy way to <strong>extend</strong> the language with new primitives and mechanisms that resemble <strong>native</strong>, in order to “<em>scale</em>” the software to suit its needs.</p>
-
 
 
 </div>
@@ -236,7 +235,6 @@ Beware that the <strong>order</strong> in which traits are listed actually matte
   
 
 
-  
   <!-- GitHub Buttons -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
@@ -252,6 +250,9 @@ Beware that the <strong>order</strong> in which traits are listed actually matte
 <!-- wow.js CDN & Activation -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
 <script> new WOW().init(); </script>
+
+<!-- Card Animation jQuery -->
+<script src="/assets/js/card-animation.js"></script>
 
 <!-- Initialize all tooltips -->
 <script>

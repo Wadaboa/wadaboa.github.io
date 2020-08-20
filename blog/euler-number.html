@@ -19,7 +19,7 @@
   <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
 
   <!-- Font Awesome CDN -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 
   <!-- Bootstrap CSS CDN -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -108,84 +108,81 @@ The features that we observe on a blob could be related to its <em>contour</em> 
 
 <p>When we refer to the Euler number in computer vision, more often than not we are not talking about the famous value</p>
 
-<script type="math/tex; mode=display">e=\lim_{n\to+\infty} (1 + \frac{1}{n})^{n},</script>
+\[e=\lim_{n\to+\infty} (1 + \frac{1}{n})^{n},\]
 
 <p>but rather we are mentioning a <strong>topological feature</strong> related to blob analysis, which is invariant to the so-called <em>rubber-sheet transformations</em>, hence it is also similarity (rotation, translation and scale) invariant.<br>
 So, the <strong>Euler number</strong> is actually defined as follows:</p>
 
-<script type="math/tex; mode=display">E = C - H,</script>
+\[E = C - H,\]
 
 <p>where $C$ is the number of connected components in our image and $H$ is the total number of <strong>holes</strong> in our blobs.<br>
 Usually, this blob feature is used to count the number of holes inside each connected component: to do so, you obviously need to set $C = 1$ and you also need a way to actually compute the Euler number.<br>
 It can be shown that, based on the chosen distance used to represent neighborhoods in our analysis, the Euler number can be easily computed by sliding some $2\times2$ binary patterns, named <strong>bit quads</strong>, across the image, to count the number of occurrences of each pattern:</p>
 
-<script type="math/tex; mode=display">E_{4} = \frac{1}{4} [n(Q_{1}) - n(Q_{3}) + 2n(Q_{D})],</script>
+\[E_{4} = \frac{1}{4} [n(Q_{1}) - n(Q_{3}) + 2n(Q_{D})],\]
 
-<script type="math/tex; mode=display">E_{8} = \frac{1}{4} [n(Q_{1}) - n(Q_{3}) - 2n(Q_{D})],</script>
+\[E_{8} = \frac{1}{4} [n(Q_{1}) - n(Q_{3}) - 2n(Q_{D})],\]
 
 <p>where $n(Q_{i})$ indicates the <strong>number of matches</strong> of the patterns $Q_{i}$ on our image, the subscrips indicate the chosen <strong>distance</strong> (i.e. 4 for city-block and 8 for chessboard distance) and the bit quads $Q_{i}$ are given by:</p>
 
-<script type="math/tex; mode=display">% <![CDATA[
-Q_{1} =
+\[Q_{1} =
 \begin{bmatrix}
-1 & 0 \\
-0 & 0
+1 &amp; 0 \\
+0 &amp; 0
 \end{bmatrix}
 %
 \begin{bmatrix}
-0 & 1 \\
-0 & 0
+0 &amp; 1 \\
+0 &amp; 0
 \end{bmatrix}
 %
 \begin{bmatrix}
-0 & 0 \\
-1 & 0
+0 &amp; 0 \\
+1 &amp; 0
 \end{bmatrix}
 %
 \begin{bmatrix}
-0 & 0 \\
-0 & 1
-\end{bmatrix} %]]></script>
+0 &amp; 0 \\
+0 &amp; 1
+\end{bmatrix}\]
 
-<script type="math/tex; mode=display">% <![CDATA[
-Q_{3} =
+\[Q_{3} =
 \begin{bmatrix}
-0 & 1 \\
-1 & 1
+0 &amp; 1 \\
+1 &amp; 1
 \end{bmatrix}
 %
 \begin{bmatrix}
-1 & 0 \\
-1 & 1
+1 &amp; 0 \\
+1 &amp; 1
 \end{bmatrix}
 %
 \begin{bmatrix}
-1 & 1 \\
-0 & 1
+1 &amp; 1 \\
+0 &amp; 1
 \end{bmatrix}
 %
 \begin{bmatrix}
-1 & 1 \\
-1 & 0
-\end{bmatrix} %]]></script>
+1 &amp; 1 \\
+1 &amp; 0
+\end{bmatrix}\]
 
-<script type="math/tex; mode=display">% <![CDATA[
-Q_{D} =
+\[Q_{D} =
 \begin{bmatrix}
-1 & 0 \\
-0 & 1
+1 &amp; 0 \\
+0 &amp; 1
 \end{bmatrix}
 %
 \begin{bmatrix}
-0 & 1 \\
-1 & 0
-\end{bmatrix} %]]></script>
+0 &amp; 1 \\
+1 &amp; 0
+\end{bmatrix}\]
 
 <p>One thing to keep in mind is that when you compute the Euler number with the goal of counting the number of holes in a single blob, you should run the bit quads processing on an image which just contains the blob under analysis.</p>
 
 <h3 id="python-implementation">Python implementation</h3>
 
-<p>In this section I will present my personal implementation of the computation of the Euler number and on how to count the number of holes in each connected component in our image. The following scripts will use the open-source libraries <code class="highlighter-rouge">opencv</code> and <code class="highlighter-rouge">numpy</code>, without explicitely importing them.<br>
+<p>In this section I will present my personal implementation of the computation of the Euler number and on how to count the number of holes in each connected component in our image. The following scripts will use the open-source libraries <code class="language-plaintext highlighter-rouge">opencv</code> and <code class="language-plaintext highlighter-rouge">numpy</code>, without explicitely importing them.<br>
 First of all, we have to define the bit quads as a <em>global dictionary</em>:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">BIT_QUADS</span> <span class="o">=</span> <span class="p">{</span>
@@ -282,7 +279,7 @@ First of all, we have to define the bit quads as a <em>global dictionary</em>:</
     <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">euler</span> <span class="o">/</span> <span class="mi">4</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p>The function <code class="highlighter-rouge">get_strides</code> is used here to compute a matrix containing every possible $2\times2$ window of our image, so that we can just iterate over the pre-computed <em>strides</em>, rather than twist our head around indices in the Euler number computation function. The <code class="highlighter-rouge">get_strides</code> function is defined by:</p>
+<p>The function <code class="language-plaintext highlighter-rouge">get_strides</code> is used here to compute a matrix containing every possible $2\times2$ window of our image, so that we can just iterate over the pre-computed <em>strides</em>, rather than twist our head around indices in the Euler number computation function. The <code class="language-plaintext highlighter-rouge">get_strides</code> function is defined by:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">get_strides</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">window_size</span><span class="p">):</span>
     <span class="s">'''
@@ -317,8 +314,8 @@ First of all, we have to define the bit quads as a <em>global dictionary</em>:</
     <span class="k">return</span> <span class="n">n_holes</span>
 </code></pre></div></div>
 
-<p>The <code class="highlighter-rouge">holes_number</code> function calls the <code class="highlighter-rouge">get_connected_component</code> function and, for each mask image, computes the number of holes as $H = 1 - E$, where $E$ is the value returned by <code class="highlighter-rouge">euler_number</code> by matching the bit quads across the mask image. Finally, a list indexed by the blob’s label number is returned by the function, where each position contains the number of holes in that specific region.<br>
-If you don’t know how to compute the <strong>connected components</strong> in your image, the <code class="highlighter-rouge">opencv</code> library has the following method available:</p>
+<p>The <code class="language-plaintext highlighter-rouge">holes_number</code> function calls the <code class="language-plaintext highlighter-rouge">get_connected_component</code> function and, for each mask image, computes the number of holes as $H = 1 - E$, where $E$ is the value returned by <code class="language-plaintext highlighter-rouge">euler_number</code> by matching the bit quads across the mask image. Finally, a list indexed by the blob’s label number is returned by the function, where each position contains the number of holes in that specific region.<br>
+If you don’t know how to compute the <strong>connected components</strong> in your image, the <code class="language-plaintext highlighter-rouge">opencv</code> library has the following method available:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">num_labels</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">stats</span><span class="p">,</span> <span class="n">centroids</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">connectedComponentsWithStats</span><span class="p">(</span>
     <span class="n">img</span><span class="p">,</span> <span class="n">connectivity</span><span class="o">=</span><span class="mi">8</span>
@@ -329,7 +326,6 @@ If you don’t know how to compute the <strong>connected components</strong> in 
 
 <p>If you have any kind of issue or doubt, feel free to comment <a href="https://github.com/Wadaboa/cv-con-rod-inspection">my project on Github</a>, which is where I actually implemented the provided Python source code.<br>
 Anyway, I know that my way of computing the Euler number is not the fastest, so I’m looking on new ways to try and improve it. I think that the bottleneck may be <em>strides</em> related.</p>
-
 
 
 </div>
@@ -365,7 +361,6 @@ Anyway, I know that my way of computing the Euler number is not the fastest, so 
   
 
 
-  
   <!-- GitHub Buttons -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
@@ -381,6 +376,9 @@ Anyway, I know that my way of computing the Euler number is not the fastest, so 
 <!-- wow.js CDN & Activation -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
 <script> new WOW().init(); </script>
+
+<!-- Card Animation jQuery -->
+<script src="/assets/js/card-animation.js"></script>
 
 <!-- Initialize all tooltips -->
 <script>

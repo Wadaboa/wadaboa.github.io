@@ -11,8 +11,19 @@
 		<sy:updateFrequency>1</sy:updateFrequency>
 		<link>https://alessiofalai.it</link>
 		<atom:link href="https://alessiofalai.it/feed.xml" rel="self" type="application/rss+xml" />
-		<lastBuildDate>Mon, 23 Mar 2020 00:00:00 +0000</lastBuildDate>
+		<lastBuildDate>Fri, 21 Aug 2020 00:00:00 +0000</lastBuildDate>
 		
+		
+			<item>
+				<title>How to create an impressive GitHub profile README</title>
+				
+				
+					<description>A simple guide on how to make your GitHub profile pop.</description>
+				
+				<pubDate>Fri, 21 Aug 2020 00:00:00 +0000</pubDate>
+				<link>https://alessiofalai.it/blog/github-profile-readme</link>
+				<guid isPermaLink="true">https://alessiofalai.it/blog/github-profile-readme</guid>
+			</item>
 		
 			<item>
 				<title>Jekyll + Github Pages + Travis CI</title>

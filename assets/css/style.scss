@@ -1,6 +1,7 @@
 ---
 ---
 
+@charset "UTF-8";
 @import "{{ site.theme }}";
 
 .timeline-body {
@@ -222,8 +223,10 @@
 
 .page-navigation .prev {
 	text-align: left;
+	float: left;
 }
 
 .page-navigation .next {
 	text-align: right;
+	float: right;
 }

@@ -1,43 +1,48 @@
 [
   
     {
-      "title"    : "How to create an impressive GitHub profile README",
-      "category" : "",
-      "tags"     : "Web",
-      "url"      : "/blog/github-profile-readme",
-      "date"     : "2020-08-21 00:00:00 +0000"
+      "title"       : "How to create an impressive GitHub profile README",
+      "category"    : "",
+      "description" : "A simple guide on how to make your GitHub profile pop.",
+      "tags"        : "Web",
+      "url"         : "/blog/github-profile-readme",
+      "date"        : "2020-08-21 00:00:00 +0000"
     } ,
   
     {
-      "title"    : "Jekyll + Github Pages + Travis CI",
-      "category" : "",
-      "tags"     : "Web",
-      "url"      : "/blog/jekyll-ghpages-travis",
-      "date"     : "2020-03-23 00:00:00 +0000"
+      "title"       : "Jekyll + Github Pages + Travis CI",
+      "category"    : "",
+      "description" : "A tutorial on how to build a static site using Jekyll and on how to automatically deploy it to Github Pages using Travis CI.",
+      "tags"        : "Web",
+      "url"         : "/blog/jekyll-ghpages-travis",
+      "date"        : "2020-03-23 00:00:00 +0000"
     } ,
   
     {
-      "title"    : "Java interfaces vs. Scala traits",
-      "category" : "",
-      "tags"     : "Scala",
-      "url"      : "/blog/scala-traits",
-      "date"     : "2020-03-13 00:00:00 +0000"
+      "title"       : "Java interfaces vs. Scala traits",
+      "category"    : "",
+      "description" : "The highlighting of some key differences between Java interfaces and the fancy Scala traits.",
+      "tags"        : "Scala",
+      "url"         : "/blog/scala-traits",
+      "date"        : "2020-03-13 00:00:00 +0000"
     } ,
   
     {
-      "title"    : "The Euler number in blob analysis",
-      "category" : "",
-      "tags"     : "Computer Vision",
-      "url"      : "/blog/euler-number",
-      "date"     : "2020-02-19 00:00:00 +0000"
+      "title"       : "The Euler number in blob analysis",
+      "category"    : "",
+      "description" : "An in-depth look at the Euler number computation, along with a simple Python implementation, used to count the number of holes in a connected component.",
+      "tags"        : "Computer Vision",
+      "url"         : "/blog/euler-number",
+      "date"        : "2020-02-19 00:00:00 +0000"
     } ,
   
     {
-      "title"    : "Propositional logic",
-      "category" : "",
-      "tags"     : "Logic",
-      "url"      : "/blog/propositional-logic",
-      "date"     : "2020-01-31 00:00:00 +0000"
+      "title"       : "Propositional logic",
+      "category"    : "",
+      "description" : "A broad introduction to propositional logic, the simplest possible form of reasoning.",
+      "tags"        : "Logic",
+      "url"         : "/blog/propositional-logic",
+      "date"        : "2020-01-31 00:00:00 +0000"
     } 
   
 ]

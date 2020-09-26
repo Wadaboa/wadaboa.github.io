@@ -5,12 +5,6 @@ permalink: /about/
 weight: 3
 ---
 
-<style>
-	.skill {
-		margin-bottom: 20px;
-	}
-</style>
-
 # **About Me**
 
 Hi, I am **{{ site.author.name }}** :wave:.<br>

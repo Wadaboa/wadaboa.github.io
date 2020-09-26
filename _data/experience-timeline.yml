@@ -1,51 +1,71 @@
 - title: Quid informatica S.p.A.
+  position: Python developer · Freelance
   from: February 2020
   to: June 2020
-  description:
-    - Position → Python developer · Freelance
-    - Project → Development of 3 production-grade Python micro-services working in banking environments, to classify and extract text from identity documents
-    - Main achievement → Implemented NER (Named Entity Recognition) techniques to parse raw OCR results, using spaCy
-    - Technologies → Python, OpenCV, Flask, Gunicorn, SpaCy, Tesseract, Google Vision, ABBYY, OCR.Space, Azure Cognitive
+  project: Development of 3 production-grade Python micro-services working in banking environments, to classify and extract text from identity documents
+  achievement: Implemented NER (Named Entity Recognition) techniques to parse raw OCR results, using spaCy
+  technologies:
+    - Python
+    - OpenCV
+    - Flask
+    - Gunicorn
+    - SpaCy
+    - Tesseract
+    - Google Vision
+    - ABBYY
+    - OCR.Space
+    - Azure Cognitive
 
 - title: QI-Lab S.r.l.
+  position: Python developer · Freelance
   from: June 2019
   to: October 2019
-  description:
-    - Position → Python developer · Freelance
-    - Project → Identity documents OCR library development
-    - Main achievement → Implemented edge detection and text detection techniques to improve OCR results, using OpenCV
-    - Technologies → Python, OpenCV, Django, Tesseract, Google Vision, ABBYY
+  project: Identity documents OCR library development
+  achievement: Implemented edge detection and text detection techniques to improve OCR results, using OpenCV
+  technologies:
+    - Python
+    - OpenCV
+    - Django
+    - Tesseract
+    - Google Vision
+    - ABBYY
 
 - title: QI-Lab S.r.l.
+  position: Python developer · Internship
   from: March 2019
   to: May 2019
-  description:
-    - Position → Python developer · Internship
-    - Project → Identity documents OCR library development
-    - Main achievement → Implemented a custom image binarization algorithm, using OpenCV
-    - Technologies → Python, OpenCV, Django, Tesseract
+  project: Identity documents OCR library development
+  achievement: Implemented a custom image binarization algorithm, using OpenCV
+  technologies:
+    - Python
+    - OpenCV
+    - Django
+    - Tesseract
 
 - title: Continental S.p.A.
+  position: Python developer · Freelance
   from: January 2019
   to: September 2019
-  description:
-    - Position → Python developer · Freelance
-    - Project → Manually operated visual inspection digitalization
-    - Main achievement → Development of a production-grade modular GUI working in industrial settings, using Qt
-    - Technologies → Python, Qt
+  project: Manually operated visual inspection digitalization
+  achievement: Development of a production-grade modular GUI working in industrial settings, using Qt
+  technologies:
+    - Python
+    - Qt
 
 - title: Easyclaims.eu
+  position: PHP developer · Freelance
   from: January 2018
   to: March 2018
-  description:
-    - Position → PHP developer · Freelance
-    - Project → Insurance claims video verification interface
-    - Technologies → PHP, MySQL
+  project: Insurance claims video verification interface
+  technologies:
+    - PHP
+    - MySQL
 
 - title: Develer S.r.l.
+  position: Python developer · Internship
   from: June 2015
   to: June 2015
-  description:
-    - Position → Python developer · Internship
-    - Project → Barcode handling GUI design and deployment
-    - Technologies → Python, Qt
+  project: Barcode handling GUI design and deployment
+  technologies:
+    - Python
+    - Qt

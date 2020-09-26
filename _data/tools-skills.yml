@@ -1,15 +1,15 @@
-- name: Bash
-  percentage: 90
-  color: info
-
-- name: LaTeX
-  percentage: 70
+- name: Git
+  percentage: 100
   color: success
 
-- name: Git
-  percentage: 70
-  color: danger
+- name: Bash
+  percentage: 90
+  color: success
 
 - name: Docker
-  percentage: 50
+  percentage: 80
+  color: success
+
+- name: LaTeX
+  percentage: 60
   color: warning

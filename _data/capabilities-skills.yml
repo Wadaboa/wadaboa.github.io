@@ -1,23 +1,19 @@
 - name: Organization
   percentage: 100
-  color: warning
+  color: success
 
-- name: Project management
+- name: Curiosity/Problem solving
   percentage: 90
-  color: secondary
+  color: success
 
-- name: Problem solving
+- name: Project management/Leadership
   percentage: 90
   color: success
 
 - name: Teamwork
   percentage: 80
-  color: danger
+  color: success
 
-- name: Curiosity
-  percentage: 80
-  color: dark
-
-- name: Leadership
+- name: Modeling
   percentage: 70
-  color: info
+  color: warning

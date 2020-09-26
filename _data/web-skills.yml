@@ -1,11 +1,11 @@
 - name: Wordpress
-  percentage: 90
+  percentage: 100
   color: success
 
 - name: HTML/CSS/JS/jQuery
-  percentage: 80
-  color: secondary
+  percentage: 70
+  color: warning
 
 - name: PHP/MySQL/REST API
-  percentage: 80
-  color: info
+  percentage: 70
+  color: warning

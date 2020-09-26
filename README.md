@@ -17,7 +17,7 @@ bundle exec jekyll build
 
 The build stage populates the `_site` folder, meaning that executing the command above is mandatory before pushing changes to the `release` branch.
 
-If insted you want to test changes locally, just run:
+If instead you want to test changes locally, just run:
 
 ```bash
 bundle exec jekyll serve

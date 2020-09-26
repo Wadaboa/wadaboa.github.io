@@ -1,0 +1,32 @@
+<div class="search-page search-active">
+  <div class="search-icon-close-container">
+    <span class="search-icon-close">
+		<a onclick="window.history.back()">
+      		<i class="fa fa-times"></i>
+		</a>
+    </span>
+  </div>
+  <div class="search-main container">
+    <div class="row">
+      <div class="col-md-12">
+        <form></form>
+        <input type="text" id="search-input" placeholder="$ grep...">
+        </form>
+        <div id="search-results" class="mini-post-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.rawgit.com/christian-fei/Simple-Jekyll-Search/master/dest/simple-jekyll-search.min.js"></script>
+<script>
+	var sjs = SimpleJekyllSearch({
+		searchInput: document.getElementById('search-input'),
+		resultsContainer: document.getElementById('search-results'),
+		json: '{{ '/search.json' | relative_url }}',
+		searchResultTemplate: '<div class="post-preview item"><a href="{url}"><h2 class="post-title">{title}</h2><h3 class="post-subtitle">{description}</h3><hr></a></div>',
+		noResultsText: '<li class="list-group-item">No results found</li>',
+		limit: 50,
+		fuzzy: false
+	});
+</script>

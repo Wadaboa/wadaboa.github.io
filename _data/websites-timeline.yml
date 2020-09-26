@@ -1,31 +1,40 @@
 - title: tognonishop.com
+  position: Website administrator · Freelance
   from: April 2020
   to: present
-  description:
-    - Position → Website administrator · Freelance
-    - Project → Fashion (shoes) e-commerce website
-    - Technologies → Wordpress, Woocommerce
+  project: Fashion (shoes) e-commerce website
+  technologies:
+    - Wordpress
+    - Woocommerce
 
 - title: studio54italy.it
+  position: Website administrator · Freelance
   from: March 2020
   to: present
-  description:
-    - Position → Website administrator · Freelance
-    - Project → Textile catalog website
-    - Technologies → Wordpress, Woocommerce
+  project: Textile catalog website
+  technologies:
+    - Wordpress
+    - Woocommerce
 
 - title: loscoiattolofirenze.it
+  position: Website administrator · Freelance
   from: March 2020
   to: present
-  description:
-    - Position → Website administrator · Freelance
-    - Project → Fashion (clothes) e-commerce website
-    - Technologies → Wordpress, Woocommerce
+  project: Fashion (clothes) e-commerce website
+  technologies:
+    - Wordpress
+    - Woocommerce
 
 - title: walterquiet.com
+  position: Website administrator · Freelance
   from: December 2018
   to: present
-  description:
-    - Position → Website administrator · Freelance
-    - Project → Photography presentation website
-    - Technologies → Wordpress, Squarespace, Woocommerce, Leadpages, Deadline Funnel, Kajabi, Kartra
+  project: Photography presentation website
+  technologies:
+    - Wordpress
+    - Squarespace
+    - Woocommerce
+    - Leadpages
+    - Deadline Funnel
+    - Kajabi
+    - Kartra

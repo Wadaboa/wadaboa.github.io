@@ -1,0 +1,30 @@
+<div class="col mt-4">
+	<h2 class="mb-3">{{ include.title }}</h2>
+	<div class="timeline-body">
+		{% for item in include.source %}
+		<div class="timeline-item">
+			<div class="content">
+				<h4>{{ item.title }}</h4>
+				<h5>{{ item.position }}</h5>
+				<h6 class="date">{{ item.from }} — {{ item.to }}</h6>
+				{% if item.project %}
+					<p><div class="timeline-label">Project</div>{{ item.project }}</p>
+				{% endif %}
+				{% if item.achievement %}
+					<p>
+						<div class="timeline-label">Main achievement</div>
+						{{item.achievement }}
+					</p>
+				{% endif %}
+				{% if item.technologies %}
+					<p class="card-text timelines-technologies">
+						{%- for tech in item.technologies -%}
+						<span class="badge badge-pill text-primary border border-primary ml-1">{{ tech }}</span>
+						{%- endfor -%}
+					</p>
+				{% endif %}
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+</div>

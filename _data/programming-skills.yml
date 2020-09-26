@@ -1,23 +1,23 @@
 - name: Python
   percentage: 90
-  color: danger
+  color: success
 
 - name: Java
   percentage: 80
-  color: info
+  color: success
+
+- name: Prolog/MiniZinc/Z3
+  percentage: 60
+  color: warning
 
 - name: C/C++
   percentage: 55
-  color: secondary
+  color: warning
 
 - name: Scala
-  percentage: 40
+  percentage: 50
   color: warning
 
 - name: MATLAB
   percentage: 35
-  color: dark
-
-- name: Prolog
-  percentage: 30
-  color: warning
+  color: danger

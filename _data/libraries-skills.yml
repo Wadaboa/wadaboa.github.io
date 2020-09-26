@@ -1,23 +1,19 @@
+- name: Django/Flask
+  percentage: 80
+  color: success
+
+- name: Qt
+  percentage: 80
+  color: success
+
 - name: OpenCV
   percentage: 70
   color: warning
 
-- name: Qt
-  percentage: 65
-  color: success
-
-- name: SciPy
+- name: SciPy/SciKits
   percentage: 60
-  color: dark
-
-- name: SciKits
-  percentage: 50
-  color: danger
-
-- name: Django
-  percentage: 50
-  color: secondary
+  color: warning
 
 - name: Spark
-  percentage: 35
-  color: info
+  percentage: 40
+  color: danger

@@ -4,4 +4,4 @@
 
 - name: English
   percentage: 80
-  color: secondary
+  color: success

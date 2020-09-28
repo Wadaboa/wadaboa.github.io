@@ -5,7 +5,7 @@ permalink: /about/
 weight: 3
 ---
 
-# **About Me**
+# **About Me** <span><a href="https://github.com/Wadaboa/cv-resume/raw/master/cv.pdf" class="btn btn-info" id="cv-button">CV</a></span>
 
 Hi, I am **{{ site.author.name }}** :wave:.<br>
 

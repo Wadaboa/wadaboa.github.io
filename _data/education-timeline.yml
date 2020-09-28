@@ -3,9 +3,9 @@
   to: present
   focus:
     - Statiscal, logical and mathematical foundations of AI
-    - Machine learning, deep learning and big data applications
-    - Knowledge representation
-    - Computer vision
+    - Machine Learning, Deep Learning and big data applications
+    - Knowledge Representation and declarative/functional programming
+    - Computer Vision and Natural Language Processing
   technologies:
     - Python
     - Prolog
@@ -18,6 +18,7 @@
   from: 2016
   to: 2019
   grade: 110 cum laude / 110
+  thesis: Refinement of a Python library to perform OCR on identity documents
   focus:
     - Mathematical and logical foundations of computer science
     - Advanced programming techniques and software design principles

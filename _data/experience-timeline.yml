@@ -1,4 +1,20 @@
 - title: Quid informatica S.p.A.
+  position: Python developer · Part time
+  from: August 2020
+  to: September 2020
+  project: Refinement of a text classification model and implementation of specialized extraction algorithms to parse OCR results
+  achievement: Trained a text classification model to categorize financial documents, using fastText
+  technologies:
+    - Python
+    - OpenCV
+    - Flask
+    - Tornado
+    - Gunicorn
+    - SpaCy
+    - fastText
+    - Azure Cognitive
+
+- title: Quid informatica S.p.A.
   position: Python developer · Freelance
   from: February 2020
   to: June 2020
@@ -57,6 +73,7 @@
   from: January 2018
   to: March 2018
   project: Insurance claims video verification interface
+  achievement: Gained some real-world knowledge about developing production software, using agile kanban techniques
   technologies:
     - PHP
     - MySQL
@@ -66,6 +83,7 @@
   from: June 2015
   to: June 2015
   project: Barcode handling GUI design and deployment
+  achievement: Gained insights about company environments and software design principles
   technologies:
     - Python
     - Qt

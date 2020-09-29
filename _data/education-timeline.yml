@@ -11,8 +11,7 @@
     - Prolog
     - Scala
     - Spark
-    - MiniZinc
-    - Z3
+    - MiniZinc/Z3
 
 - title: Bachelor's degree in CS @ UNIFI
   from: 2016
@@ -33,6 +32,7 @@
   from: 2011
   to: 2016
   grade: 100 / 100
+  thesis: Implementation of a C++ holographic experience
   focus:
     - Network systems
     - Computer architectures

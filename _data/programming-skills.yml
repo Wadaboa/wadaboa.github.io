@@ -6,7 +6,7 @@
   percentage: 80
   color: success
 
-- name: Prolog/MiniZinc/Z3
+- name: Prolog/MiniZinc
   percentage: 60
   color: warning
 

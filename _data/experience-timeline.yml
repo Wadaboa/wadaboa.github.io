@@ -13,6 +13,7 @@
     - SpaCy
     - fastText
     - Azure Cognitive
+    - Podman
 
 - title: Quid informatica S.p.A.
   position: Python developer · Freelance
@@ -45,9 +46,10 @@
     - Tesseract
     - Google Vision
     - ABBYY
+    - Docker
 
 - title: QI-Lab S.r.l.
-  position: Python developer · Internship
+  position: Python developer · Stage
   from: March 2019
   to: May 2019
   project: Identity documents OCR library development
@@ -79,7 +81,7 @@
     - MySQL
 
 - title: Develer S.r.l.
-  position: Python developer · Internship
+  position: Python developer · Stage
   from: June 2015
   to: June 2015
   project: Barcode handling GUI design and deployment

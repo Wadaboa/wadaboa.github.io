@@ -2,11 +2,15 @@
   percentage: 100
   color: success
 
+- name: Jupyter
+  percentage: 100
+  color: success
+
 - name: Bash
   percentage: 90
   color: success
 
-- name: Docker
+- name: Docker/Podman
   percentage: 80
   color: success
 

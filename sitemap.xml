@@ -2,15 +2,15 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>alessiofalai.it/blog/propositional-logic</loc>
-<lastmod>2020-03-21T22:03:48+00:00</lastmod>
+<lastmod>2020-03-21T22:52:21+00:00</lastmod>
 </url>
 <url>
 <loc>alessiofalai.it/blog/euler-number</loc>
-<lastmod>2020-03-21T22:03:48+00:00</lastmod>
+<lastmod>2020-03-21T22:52:21+00:00</lastmod>
 </url>
 <url>
 <loc>alessiofalai.it/blog/scala-traits</loc>
-<lastmod>2020-03-21T22:03:48+00:00</lastmod>
+<lastmod>2020-03-21T22:52:21+00:00</lastmod>
 </url>
 <url>
 <loc>alessiofalai.it/blog/jekyll-ghpages-travis</loc>
@@ -22,11 +22,11 @@
 </url>
 <url>
 <loc>alessiofalai.it/404</loc>
-<lastmod>2020-03-21T22:03:48+00:00</lastmod>
+<lastmod>2020-03-21T22:52:21+00:00</lastmod>
 </url>
 <url>
 <loc>alessiofalai.it/about/</loc>
-<lastmod>2020-09-28T06:25:38+00:00</lastmod>
+<lastmod>2020-09-29T17:58:20+00:00</lastmod>
 </url>
 <url>
 <loc>alessiofalai.it/experience/</loc>
@@ -34,11 +34,11 @@
 </url>
 <url>
 <loc>alessiofalai.it/blog/</loc>
-<lastmod>2020-03-21T22:03:48+00:00</lastmod>
+<lastmod>2020-03-21T22:52:21+00:00</lastmod>
 </url>
 <url>
 <loc>alessiofalai.it/</loc>
-<lastmod>2020-03-21T22:03:48+00:00</lastmod>
+<lastmod>2020-03-21T22:52:21+00:00</lastmod>
 </url>
 <url>
 <loc>alessiofalai.it/projects/</loc>
@@ -50,6 +50,6 @@
 </url>
 <url>
 <loc>alessiofalai.it/blog/tags</loc>
-<lastmod>2020-03-21T22:03:48+00:00</lastmod>
+<lastmod>2020-03-21T22:52:21+00:00</lastmod>
 </url>
 </urlset>

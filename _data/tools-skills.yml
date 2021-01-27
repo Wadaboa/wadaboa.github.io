@@ -14,6 +14,10 @@
   percentage: 80
   color: success
 
+- name: Qt
+  percentage: 80
+  color: success
+
 - name: LaTeX
-  percentage: 60
+  percentage: 70
   color: warning

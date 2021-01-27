@@ -8,6 +8,7 @@
     - Computer Vision and Natural Language Processing
   technologies:
     - Python
+    - SKLearn/PyTorch/Keras
     - Prolog
     - Scala
     - Spark

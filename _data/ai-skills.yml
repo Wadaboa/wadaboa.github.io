@@ -1,8 +1,8 @@
-- name: Django/Flask
-  percentage: 80
+- name: PyTorch
+  percentage: 90
   color: success
 
-- name: Qt
+- name: SciPy/SciKits
   percentage: 80
   color: success
 
@@ -10,9 +10,9 @@
   percentage: 70
   color: warning
 
-- name: SciPy/SciKits
-  percentage: 60
-  color: warning
+- name: Keras
+  percentage: 40
+  color: danger
 
 - name: Spark
   percentage: 40

@@ -2,6 +2,10 @@
   percentage: 100
   color: success
 
+- name: Django/Flask
+  percentage: 80
+  color: success
+
 - name: HTML/CSS/JS/jQuery
   percentage: 70
   color: warning

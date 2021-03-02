@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content=""I love keyboards :keyboard:,  open-source software :penguin: and  learning something new everyday :open_book:."">
+
+  <title>Alessio Falai</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" type="text/css"/>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
+
+
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-161544643-1', 'auto');
+	ga('send', 'pageview', { 'page': location.pathname + location.search + location.hash});
+	ga('set', 'anonymizeIp', false);
+    </script>
+    <!-- End Google Analytics -->
+    </head>
+
+
+<body class="d-flex flex-column h-100">
+
+  <main class="flex-shrink-0 container mt-5">
+  <nav class="navbar navbar-expand-lg navbar-light">
+
+  <a class="navbar-brand" href="/"><h5><b>Alessio Falai</b></h5></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto">
+<a class="nav-item nav-link " href="/projects/">Projects</a>
+
+      <a class="nav-item nav-link active" href="/blog/">Blog</a>
+
+      <a class="nav-item nav-link " href="/about/">About</a>
+
+      <a class="nav-item nav-link " href="/experience/">Experience</a>
+
+      <a class="nav-item nav-link " href="/search/"><li class="search-icon"><i class="fa fa-search"></i></li></a>
+
+      
+
+    </div>
+  </div>
+
+</nav>
+  <div class="col-lg-10 mx-auto mt-5 post">
+  <h1><b>Tackling the Flatland challenge</b></h1>
+
+<p class="post-metadata text-muted">
+  </p>
+<div>🗓️ 25 January 2021</div>
+  <div>
+    🍿
+    <b>8 mins read time</b>
+  </div>
+<div>
+        🏷️ Tags: 
+		
+		<a class="text-decoration-none no-underline" href="/blog/tags#reinforcement-learning">
+		    <span class="tag badge badge-pill text-primary border border-primary">Reinforcement Learning</span>
+		</a>
+		
+	</div>
+<br>
+
+
+
+<p><img src="../assets/posts/flatland-challenge/flatland-logo.svg" alt="flatland-logo"></p>
+
+<h3 id="introduction">Introduction</h3>
+
+<p>The Flatland challenge is a competition organized by <a href="https://www.aicrowd.com/challenges/neurips-2020-flatland-challenge/">AIcrowd</a> and sponsored by SBB (Swiss Federal Railways), with the goal of fostering innovation in the train re-scheduling problem.</p>
+
+<p>The scope of the challenge can be summarized as follows: given a set of trains positioned on a $H\times W$ grid, the task is to make each agent arrive at its assigned target, while also minimizing the cumulative traveling time.</p>
+
+<p>As you may have noticed, I defined the problem a as re-scheduling one (with the <em>re</em> prefix), because there is a very high chance that an <em>offline</em> type of plan (meaning that one path for each agent is computed before they even enter the environment) may not work as expected. In particular, the Flatland environment introduces different types of complications:</p>
+
+<ul>
+  <li>Trains can travel at different speeds, so that, for example, slower agents must learn to step back and stand still when faster ones decide to surpass them</li>
+  <li>Trains can suffer from malfunctions, so that they would figure as out of order for a random number of steps (in a pre-determined range), thus potentially blocking other agents from reaching their targets</li>
+</ul>
+
+<p>Even though the complications listed above are not to be taken lightly, there’s another intricacy which may not be evident at first: whenever two or more trains end up in the same straight rail, looking towards opposite directions, an unrecoverable situation might happen: the dreaded deadlock.</p>
+
+<p>The worst thing about deadlocks is that, unlike malfunctions, once they happen there’s no going back: at least two agents would be completely unable to reach their targets.</p>
+
+<h3 id="approaches">Approaches</h3>
+
+<p>Our solutions mostly focus on implementing custom predictors and observators. Moreover, we tried to exploit both common models, like DQNs, but also custom-made ones, like those based on GNNs. Let me explain better$\dots$</p>
+
+<p>First of all, a predictor is a module which takes care of estimating where agents will be in the future, while an observator is another module which is tasked to encode the information of a state in a format which should be suitable for the component responsible for computing the best action that each agent should perform at any given time step.</p>
+
+<p>Before explaining predictors and observators we have to take a step back: indeed, we decided to structure our approach from the ground up, starting from the environment itself.</p>
+
+<p>Inspired by the great work in <a href="#1">[1]</a>, we modeled the Flatland grid world as what we called a COJG (Cell Orientation Junction Graph): for each non-empty cell $(x, y)$ in the grid, at most $4$ nodes are allocated in the COJG graph, labeled as $(x, y, d)$ (where $(x, y)$ are spatial dimensions and $d\in {N,E,S,W}$ is the cardinal direction). Node $(i, j, d_1)$ is then connected to node $(k, l, d_2)$ if and only if an agent is allowed to travel from cell $(i, j)$ to cell $(k, l)$, starting looking towards direction $d_1$ and ending oriented towards $d_2$. Finally, edges are merged together whenever they connect non-junction nodes (i.e. straight rails) and the new edge is assigned a weight proportional to the number of deleted edges.</p>
+
+<p><img src="../assets/posts/flatland-challenge/cojg-env-32x16.png" alt="cojg"></p>
+
+<p>This new railway encoding allowed us to build more efficient and effective predictors and observators. In particular, we introduced a shortest/deviation path predictor, that estimates the position of an agent in future steps as follows: the agent either follows its shortest path or deviates from it. In this way, a prediction is composed by a shortest path with $s$ nodes and $m$ deviation paths (with $m \lt p$), again with the same number of nodes.</p>
+
+<h3 id="solutions">Solutions</h3>
+
+<p>This section presents a high level overview of the two main paths that we decided to follow in implementing our custom solutions.</p>
+
+<h4 id="simplest-and-best-model">Simplest and best model</h4>
+
+<p><img src="../assets/posts/flatland-challenge/dueling-dqn.png" alt="dqn"></p>
+
+<p>The best results that we were able to obtain in the challenge were gained by leveraging a custom observator and a simple DQN model.</p>
+
+<p>The mentioned observator is what we named the binary tree one: it builds a feature tensor of shape $(m+1,d,f)$, where $m+1$ is the number of paths returned by the shortest/deviation predictor, $d$ is the maximum number of hops in the COJG graph to consider and $f$ is the total amount of features for each node.</p>
+
+<p>As with the standard tree observation, provided out of the box in the Flatland package, we went for carefully enginereed features to describe each node. Such features include, for example, counts related to the number of malfunctioning agents, distances to other agents, distances from targets and possible deadlocks, all considered up until the examined node in the path.
+The main advantage of our binary tree observator is that it is time and memory efficient, since it performs all of its computations on the optimized underlying COJG graph.</p>
+
+<p>Now you may wonder where the “binary” term in its name comes from. It stems from the fact that the computed feature tensor gets shaped like a binary tree, where branches identify choices, i.e. <code class="language-plaintext highlighter-rouge">CHOICE_LEFT</code> and <code class="language-plaintext highlighter-rouge">CHOICE_RIGHT</code>. In this regard, the choice space is a reduced action space w.r.t. to the original one, cutting down the standard $5$ actions (<code class="language-plaintext highlighter-rouge">MOVE_FORWARD</code>, <code class="language-plaintext highlighter-rouge">MOVE_LEFT</code>, <code class="language-plaintext highlighter-rouge">MOVE_RIGHT</code>, <code class="language-plaintext highlighter-rouge">STOP_MOVING</code>, <code class="language-plaintext highlighter-rouge">DO_NOTHING</code>) to just $3$ choices (<code class="language-plaintext highlighter-rouge">CHOICE_LEFT</code> and <code class="language-plaintext highlighter-rouge">CHOICE_RIGHT</code>). If you want to know more about this action space reduction you can again refer to <a href="#1">[1]</a>.</p>
+
+<p>Finally, the binary tree observation is linearized into a fixed-size vector, which is used as input for the action estimator, i.e. a simple feed-forward DQN, which outputs one Q-value for each legal choice.</p>
+
+<h4 id="how-graphs-and-gnns-fit-into-the-picture">How graphs and GNNs fit into the picture</h4>
+
+<p><img src="../assets/posts/flatland-challenge/dqn-gnn-robot.png" alt="multi-gnn"></p>
+
+<p>In the literature, there have been lots of promising work towards the integration of GNNs and DQNs, where experiments show great generalization results over graph-structured input data. In our experiments, we wanted to exploit all the knowledge that was already encoded in our COJG graph, mostly because the presented binary tree observator and shortest/deviation paths predictor only leverage such compact graph to gain running time and memory efficiency.</p>
+
+<p>Our first try with GNNs is related to the creation of a fixed-size embedding vector to feed to a standard DQN model, by aggregating information from the $k$-hops neighbors of specific nodes in the graph. To do so, we assign simple features to the nodes, like the distance to the agent’s target and a boolean value to indicate if the cell is free or occupied. Then, the COJG structure is used directly as our GNN model and neighborhood aggregations are performed using different techniques, like GCN (Graph Convolutional Network) and GraphSAGE.</p>
+
+<p>Our second try is a more sophisticated one, based on <a href="#2">[2]</a>, which leverages a custom FOV observator, that produces an image-like tensor with different channels encoding features in a local patch around a given agent. Such tensor is then processed by a CNN network and down-scaled to a fixed size by an MLP module. Finally, these fixed-size vectors are used as features for nodes in a graph representing agents and their relations. Agents are connected in the graph if and only if they are close enough in the Flatland environment. Finally, the generated graph is used as our GNN structure and neighborhood aggregation is performed again with different strategies, like GCN and GAT (Graph Attention Network). The aggregated embedding vector (one for each agent) is then fed into the usual DQN action estimator, to obtain the best action at every time-step.</p>
+
+<p>Unfortunately, none of these experiments revelead to be successful in our application, i.e. in the Flatland Challenge, but we are confident that more research on these topic could be beneficial in obtaining much better results.</p>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>This blog post was a very broad overview of all the work that went into the Flatland project, so that you may want to check out our <a href="https://github.com/Wadaboa/flatland-challenge">GitHub repository</a>, where you can find a detailed report, slides and code. Things that didn’t fit into this article are experiments related to more technical stuff like action selectors, Bellman operators, reward shaping, hyperparameters and more.</p>
+
+<p>Flatland, and more generally MARL, is a very though problem, so that strong solutions are needed to generalize well over a wide range of environments, but we believe that research is heading in the right direction and that the integration of GNNs with standard RL models could be very beneficial.</p>
+
+<h3 id="final-disclosure">Final disclosure</h3>
+
+<p>We want to be clear that we didn’t actually participate in the true Flatland Challenge competition, but we instead took part in a small contest that was organized by professor Andrea Asperti as the final project of its Deep Learning course in the Artificial Intelligence master’s degree at the University of Bologna.</p>
+
+<h3 id="references">References</h3>
+
+<ul>
+  <li>
+    <p><a id="1">[1]</a>
+<em>Wälter Jonas (2020)</em>.<br>
+<strong>Existing and novel Approaches to the Vehicle Rescheduling Problem (VRSP)</strong>.<br>
+HSR Hochschule für Technik Rapperswil</p>
+  </li>
+  <li>
+    <p><a id="2">[2]</a>
+<em>Qingbiao Li, Fernando Gama, Alejandro Ribeiro, and Amanda Prorok (2019)</em>.<br>
+<strong>Graph Neural Networks for Decentralized Multi-Robot Path Planning</strong>.<br>
+arXiv preprint arXiv:1912.06095</p>
+  </li>
+</ul>
+
+
+<div class="page-navigation">
+  
+  
+    <a class="next" href="/blog/github-profile-readme">How to create an impressive GitHub profile README»</a>
+  
+</div>
+
+</div>
+  </main>
+
+  <footer class="mt-auto py-3 text-center">
+  
+  <div>
+	<small class="text-muted mb-2">
+		Last modified → 02 March 2021
+	</small>
+  <div>
+
+  <small class="text-muted mb-2">
+    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
+    by <strong>Alessio Falai</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center">
+<a class="social mx-1" href="mailto:falai.alessio@gmail.com" style="color: #6c757d" onmouseover="this.style.color='#db4437'" onmouseout="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-1x"></i>
+    </a><a class="social mx-1" href="https://www.facebook.com/wadaboa" style="color: #6c757d" onmouseover="this.style.color='#3b5998'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-facebook fa-1x"></i>
+    </a><a class="social mx-1" href="https://www.github.com/Wadaboa" style="color: #6c757d" onmouseover="this.style.color='#333333'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-1x"></i>
+    </a><a class="social mx-1" href="https://www.instagram.com/Wadaboa" style="color: #6c757d" onmouseover="this.style.color='#405de6'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-instagram fa-1x"></i>
+    </a><a class="social mx-1" href="https://www.linkedin.com/in/alessio-falai" style="color: #6c757d" onmouseover="this.style.color='#007bb5'" onmouseout="this.style.color='#6c757d'">
+      <i class="fab fa-linkedin-in fa-1x"></i>
+    </a>
+
+</div>
+  
+
+
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Card Animation jQuery -->
+<script src="/assets/js/card-animation.js"></script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+
+</div>
+</div></footer></body>
+
+</html>

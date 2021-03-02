@@ -1,6 +1,15 @@
 [
   
     {
+      "title"       : "Tackling the Flatland challenge",
+      "category"    : "",
+      "description" : "An overview of my team's solutions and approaches to the 2020 NeurIPS Flatland challenge, by AIcrowd.",
+      "tags"        : "Reinforcement Learning",
+      "url"         : "/blog/flatland-challenge",
+      "date"        : "2021-01-25 00:00:00 +0000"
+    } ,
+  
+    {
       "title"       : "How to create an impressive GitHub profile README",
       "category"    : "",
       "description" : "A simple guide on how to make your GitHub profile pop.",

@@ -11,8 +11,19 @@
 		<sy:updateFrequency>1</sy:updateFrequency>
 		<link>https://alessiofalai.it</link>
 		<atom:link href="https://alessiofalai.it/feed.xml" rel="self" type="application/rss+xml" />
-		<lastBuildDate>Fri, 21 Aug 2020 00:00:00 +0000</lastBuildDate>
+		<lastBuildDate>Mon, 25 Jan 2021 00:00:00 +0000</lastBuildDate>
 		
+		
+			<item>
+				<title>Tackling the Flatland challenge</title>
+				
+				
+					<description>An overview of my team's solutions and approaches to the 2020 NeurIPS Flatland challenge, by AIcrowd.</description>
+				
+				<pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
+				<link>https://alessiofalai.it/blog/flatland-challenge</link>
+				<guid isPermaLink="true">https://alessiofalai.it/blog/flatland-challenge</guid>
+			</item>
 		
 			<item>
 				<title>How to create an impressive GitHub profile README</title>
@@ -56,17 +67,6 @@
 				<pubDate>Wed, 19 Feb 2020 00:00:00 +0000</pubDate>
 				<link>https://alessiofalai.it/blog/euler-number</link>
 				<guid isPermaLink="true">https://alessiofalai.it/blog/euler-number</guid>
-			</item>
-		
-			<item>
-				<title>Propositional logic</title>
-				
-				
-					<description>A broad introduction to propositional logic, the simplest possible form of reasoning.</description>
-				
-				<pubDate>Fri, 31 Jan 2020 00:00:00 +0000</pubDate>
-				<link>https://alessiofalai.it/blog/propositional-logic</link>
-				<guid isPermaLink="true">https://alessiofalai.it/blog/propositional-logic</guid>
 			</item>
 		
 	</channel>

@@ -6,6 +6,7 @@ color: dark
 description: "An overview of my team's solutions and approaches to the 2020 NeurIPS Flatland challenge, by AIcrowd."
 ---
 
+{% include lib/mathjax.html %}
 {% assign imgs="../assets/posts/flatland-challenge/" %}
 
 ![flatland-logo]({{imgs | append: "flatland-logo.svg"}})

@@ -1,4 +1,4 @@
-### Site Settings ###
+### Site settings ###
 title: Alessio Falai
 description: >-
   "I love keyboards :keyboard:, 
@@ -10,7 +10,7 @@ baseurl: ""
 repository: Wadaboa/wadaboa.github.io
 remote_theme: YoussefRaafatNasry/portfolYOU@v2.2.1
 
-### Build Settings ###
+### Build settings ###
 plugins:
   - jekyll-default-layout
   - jekyll-gist
@@ -24,17 +24,17 @@ plugins:
   - jekyll-analytics
   - jekyll-last-modified-at
 
-### Navbar Settings ###
+### Navbar settings ###
 nav_exclude:
   - 404.html
   - index.html
   - blog/tags.html
   - blog/page-:num/index.html
 
-### Author Info ###
+### Author info ###
 author:
   name: Alessio Falai
-  image: https://avatars3.githubusercontent.com/u/1256055?s=460&v=4
+  image: assets/myself.jpg
   email: falai.alessio@gmail.com
   facebook: wadaboa
   github: Wadaboa
@@ -54,7 +54,7 @@ author:
 paginate: 6
 paginate_path: "/blog/page-:num/"
 
-### Posts Permalink ###
+### Posts permalink ###
 permalink: blog/:title
 
 ### Collections ###
@@ -96,7 +96,7 @@ jekyll_analytics:
 last-modified-at:
   date-format: "%d %B %Y"
 
-### RSS feed
+### RSS feed ###
 feed_items: 5
 feed_update_period: daily
 feed_update_frequency: 1

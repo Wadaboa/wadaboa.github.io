@@ -1,10 +1,21 @@
-- title: Amazon Italia Transport S.r.l.
-  position: Data scientist · Internship
+- title: Amazon
+  position: Applied Scientist · Full-time
+  from: November 2021
+  to: Present
+
+- title: Amazon
+  position: Applied Scientist · Internship
   from: February 2021
   to: August 2021
+  project: Application of predictive and prescriptive analytics on HR metrics such as attendance and absenteeism
+  achievement: Worked in a multi‑cultural team and managed to deliver multiple milestones across different projects
+  technologies:
+    - Python
+    - SKLearn
+    - AWS
 
-- title: Quid informatica S.p.A.
-  position: Python developer · Part time
+- title: Quid Informatica
+  position: Python Developer · Part-time
   from: August 2020
   to: September 2020
   project: Refinement of a text classification model and implementation of specialized extraction algorithms to parse OCR results
@@ -20,8 +31,8 @@
     - Azure Cognitive
     - Podman
 
-- title: Quid informatica S.p.A.
-  position: Python developer · Freelance
+- title: Quid Informatica
+  position: Python Developer · Freelance
   from: February 2020
   to: June 2020
   project: Development of 3 production-grade Python micro-services working in banking environments, to classify and extract text from identity documents
@@ -38,8 +49,8 @@
     - OCR.Space
     - Azure Cognitive
 
-- title: QI-Lab S.r.l.
-  position: Python developer · Freelance
+- title: QI-Lab
+  position: Python Developer · Freelance
   from: June 2019
   to: October 2019
   project: Identity documents OCR library development
@@ -53,8 +64,8 @@
     - ABBYY
     - Docker
 
-- title: QI-Lab S.r.l.
-  position: Python developer · Stage
+- title: QI-Lab
+  position: Python Developer · Internship
   from: March 2019
   to: May 2019
   project: Identity documents OCR library development
@@ -65,8 +76,8 @@
     - Django
     - Tesseract
 
-- title: Continental S.p.A.
-  position: Python developer · Freelance
+- title: Continental
+  position: Python Developer · Freelance
   from: January 2019
   to: September 2019
   project: Manually operated visual inspection digitalization
@@ -75,8 +86,8 @@
     - Python
     - Qt
 
-- title: Easyclaims.eu
-  position: PHP developer · Freelance
+- title: EasyClaims
+  position: PHP Developer · Freelance
   from: January 2018
   to: March 2018
   project: Insurance claims video verification interface
@@ -85,8 +96,8 @@
     - PHP
     - MySQL
 
-- title: Develer S.r.l.
-  position: Python developer · Stage
+- title: Develer
+  position: Python Developer · Internship
   from: June 2015
   to: June 2015
   project: Barcode handling GUI design and deployment

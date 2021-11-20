@@ -7,6 +7,10 @@ The website is based on the Jekyll template [portfolYOU](https://github.com/Yous
 and uses GitHub Pages to automate everything.\
 If you want to have a look, visit the link [alessiofalai.it](https://alessiofalai.it) or [wadaboa.github.io](https://wadaboa.github.io).
 
+## Ruby version
+
+Make sure that you are using Ruby 2.6.3. In order to avoid fiddling with system-level configurations, install [RVM](https://gist.github.com/denji/8706676) and then run `rvm install 2.6.3`.
+
 ## Build
 
 In order to build the website locally, run:

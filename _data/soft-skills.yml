@@ -2,7 +2,11 @@
   percentage: 100
   color: success
 
-- name: Curiosity/Problem solving
+- name: Curiosity
+  percentage: 100
+  color: success
+
+- name: Problem solving
   percentage: 90
   color: success
 
@@ -13,7 +17,3 @@
 - name: Teamwork
   percentage: 80
   color: success
-
-- name: Modeling
-  percentage: 70
-  color: warning

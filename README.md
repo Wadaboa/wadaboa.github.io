@@ -28,3 +28,13 @@ bundle exec jekyll serve
 ```
 
 This command will build the website and start a webserver at http://127.0.0.1:4000/. Remember that `serve` does not imply `build`.
+
+## Deploy
+
+To avoid messing with Travis CI, build and deploy locally using the following command:
+
+```bash
+jgd -b master -r release
+```
+
+If you don't have `jgd` available, install it with `gem install jgd` or visit [its GitHub repo](https://github.com/yegor256/jekyll-github-deploy) for more details.

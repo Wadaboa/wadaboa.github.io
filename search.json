@@ -1,12 +1,21 @@
 [
   
     {
+      "title"       : "Audio samples for my master&#39;s thesis",
+      "category"    : "",
+      "description" : "Demo page containing audio samples for all the models evaluated in my master's thesis.",
+      "tags"        : "Text-To-Speech",
+      "url"         : "/blog/master-thesis-samples",
+      "date"        : "2022-03-06 00:00:00 +0100"
+    } ,
+  
+    {
       "title"       : "Tackling the Flatland challenge",
       "category"    : "",
       "description" : "An overview of my team's solutions and approaches to the 2020 NeurIPS Flatland challenge, by AIcrowd.",
       "tags"        : "Reinforcement Learning",
       "url"         : "/blog/flatland-challenge",
-      "date"        : "2021-01-25 00:00:00 +0000"
+      "date"        : "2021-01-25 00:00:00 +0100"
     } ,
   
     {
@@ -15,7 +24,7 @@
       "description" : "A simple guide on how to make your GitHub profile pop.",
       "tags"        : "Web",
       "url"         : "/blog/github-profile-readme",
-      "date"        : "2020-08-21 00:00:00 +0000"
+      "date"        : "2020-08-21 00:00:00 +0200"
     } ,
   
     {
@@ -24,7 +33,7 @@
       "description" : "A tutorial on how to build a static site using Jekyll and on how to automatically deploy it to Github Pages using Travis CI.",
       "tags"        : "Web",
       "url"         : "/blog/jekyll-ghpages-travis",
-      "date"        : "2020-03-23 00:00:00 +0000"
+      "date"        : "2020-03-23 00:00:00 +0100"
     } ,
   
     {
@@ -33,7 +42,7 @@
       "description" : "The highlighting of some key differences between Java interfaces and the fancy Scala traits.",
       "tags"        : "Scala",
       "url"         : "/blog/scala-traits",
-      "date"        : "2020-03-13 00:00:00 +0000"
+      "date"        : "2020-03-13 00:00:00 +0100"
     } ,
   
     {
@@ -42,7 +51,7 @@
       "description" : "An in-depth look at the Euler number computation, along with a simple Python implementation, used to count the number of holes in a connected component.",
       "tags"        : "Computer Vision",
       "url"         : "/blog/euler-number",
-      "date"        : "2020-02-19 00:00:00 +0000"
+      "date"        : "2020-02-19 00:00:00 +0100"
     } ,
   
     {
@@ -51,7 +60,7 @@
       "description" : "A broad introduction to propositional logic, the simplest possible form of reasoning.",
       "tags"        : "Logic",
       "url"         : "/blog/propositional-logic",
-      "date"        : "2020-01-31 00:00:00 +0000"
+      "date"        : "2020-01-31 00:00:00 +0100"
     } 
   
 ]

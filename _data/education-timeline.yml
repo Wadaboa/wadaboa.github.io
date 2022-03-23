@@ -1,6 +1,8 @@
 - title: Master's degree in AI @ UNIBO
   from: 2019
-  to: Present
+  to: 2022
+  grade: 110/110 with honours
+  thesis: "Conditioning text-to-speech synthesis on dialect accent: a case study"
   focus:
     - Statistical, logical and mathematical foundations of AI
     - Machine Learning, Deep Learning and big data applications
@@ -17,7 +19,7 @@
 - title: Bachelor's degree in CS @ UNIFI
   from: 2016
   to: 2019
-  grade: 110 cum laude / 110
+  grade: 110/110 with honours
   thesis: Refinement of a Python library to perform OCR on identity documents
   focus:
     - Mathematical and logical foundations of computer science

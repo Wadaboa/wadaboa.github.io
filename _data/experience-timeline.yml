@@ -2,106 +2,92 @@
   position: Applied Scientist · Full-time
   from: November 2021
   to: Present
+  bullets:
+    - Worked on end-to-end research to production of multi-speaker multilingual text-to-speech cloud and edge models
+    - (2021-22) Released Alexa male voices in more than 10 locales (see <a href="https://www.corriere.it/tecnologia/22_ottobre_27/alex-cambia-voce-arriva-quella-maschile-ecco-come-funziona-e-come-sceglierla-ea6eb94f-10a8-4c35-b6a7-effc73671xlk.shtml">this article</a> as an example for it-IT)
+    - (2022-23) Contributed to the research of high-performance on-device models operating in a cross-lingual fashion and developed more than 60 voice models that are currently deployed in BMW and Mini cars (see <a href="https://www.aboutamazon.com/news/devices/amazon-bmw">this article</a> and <a href="https://www.youtube.com/watch?v=qVOHZ-PsNXw">this video</a>)
+    - (2023-24) Led a team of 3 scientists for delivering an LLM-based speech generation solution tailored for the ads use case
+    - (2024-25) Trained multi-modal LLMs for the release of Alexa+ (see <a href="https://www.aboutamazon.com/news/devices/new-alexa-generative-artificial-intelligence">this article</a>) and Amazon Nova Sonic (see <a href="https://www.aboutamazon.com/news/innovation-at-amazon/nova-sonic-voice-speech-foundation-model">this article</a>)
+    - Published 3 peer-reviewed papers (2 as second author and 1 as first author)
+  technologies:
+    - Python
+    - PyTorch 
+    - AWS 
+    - TensorFlow 
+    - MXNet
 
 - title: Amazon
   position: Applied Scientist · Internship
   from: February 2021
   to: August 2021
-  project: Application of predictive and prescriptive analytics on HR metrics such as attendance and absenteeism
-  achievement: Worked in a multi‑cultural team and managed to deliver multiple milestones across different projects
+  bullets:
+    - Trained forecasting ensemble models (random forest and boosted trees) on HR metrics like attendance and absenteeism
+    - Implemented predictive models to inform warehouse capacity planning based on regional COVID-19 outbursts
   technologies:
     - Python
     - SKLearn
     - AWS
 
 - title: Quid Informatica
-  position: Python Developer · Part-time
-  from: August 2020
+  position: Software Developer · Freelance/Part-time
+  from: February 2020
   to: September 2020
-  project: Refinement of a text classification model and implementation of specialized extraction algorithms to parse OCR results
-  achievement: Trained a text classification model to categorize financial documents, using fastText
+  bullets:
+    - Developed 3 production-grade Python micro-services working in banking environments, to classify and extract text from identity documents (see <a href="https://www.youtube.com/watch?v=eyg-UOAdKA8">the product</a>)
+    - Implemented NER (Named Entity Recognition) techniques to parse raw OCR results
+    - Trained a text classification model to categorize financial documents
   technologies:
     - Python
     - OpenCV
     - Flask
     - Tornado
     - Gunicorn
-    - SpaCy
+    - spaCy
     - fastText
-    - Azure Cognitive
-    - Podman
-
-- title: Quid Informatica
-  position: Python Developer · Freelance
-  from: February 2020
-  to: June 2020
-  project: Development of 3 production-grade Python micro-services working in banking environments, to classify and extract text from identity documents
-  achievement: Implemented NER (Named Entity Recognition) techniques to parse raw OCR results, using spaCy
-  technologies:
-    - Python
-    - OpenCV
-    - Flask
-    - Gunicorn
-    - SpaCy
-    - Tesseract
-    - Google Vision
-    - ABBYY
-    - OCR.Space
-    - Azure Cognitive
+    - GCP 
+    - Azure
 
 - title: QI-Lab
-  position: Python Developer · Freelance
-  from: June 2019
+  position: Software Developer · Internship/Freelance
+  from: March 2019
   to: October 2019
-  project: Identity documents OCR library development
-  achievement: Implemented edge detection and text detection techniques to improve OCR results, using OpenCV
+  bullets:
+    - Developed a library for OCR applications on identity documents
+    - Implemented edge/text detection techniques and custom image binarization algorithms as pre-processing steps to improve OCR results (read the <a href="https://web.archive.org/web/20210616083923/https://www.qi-lab.it/2019/08/29/tecniche-thresholding-la-binarizzazione-immagini/">blog post</a>)
   technologies:
     - Python
     - OpenCV
     - Django
     - Tesseract
-    - Google Vision
-    - ABBYY
     - Docker
 
-- title: QI-Lab
-  position: Python Developer · Internship
-  from: March 2019
-  to: May 2019
-  project: Identity documents OCR library development
-  achievement: Implemented a custom image binarization algorithm, using OpenCV
-  technologies:
-    - Python
-    - OpenCV
-    - Django
-    - Tesseract
-
 - title: Continental
-  position: Python Developer · Freelance
+  position: Software Developer · Freelance
   from: January 2019
   to: September 2019
-  project: Manually operated visual inspection digitalization
-  achievement: Development of a production-grade modular GUI working in industrial settings, using Qt
+  bullets:
+    - Developed a production-grade modular GUI working in industrial settings
+    - The solution is currently deployed and used by human operators to log visual inspection results of mechanical pieces produced by a factory automation machine
   technologies:
     - Python
     - Qt
 
 - title: EasyClaims
-  position: PHP Developer · Freelance
+  position: Backend Developer · Freelance
   from: January 2018
   to: March 2018
-  project: Insurance claims video verification interface
-  achievement: Gained some real-world knowledge about developing production software, using agile kanban techniques
+  bullets:
+    - Implemented backend features for an insurance claims video verification interface
   technologies:
     - PHP
     - MySQL
 
 - title: Develer
-  position: Python Developer · Internship
+  position: Software Developer · Internship
   from: June 2015
   to: June 2015
-  project: Barcode handling GUI design and deployment
-  achievement: Gained insights about company environments and software design principles
+  bullets:
+    - Designed and developed a library and GUI to read, generate and print barcodes during my 4th year in high school
   technologies:
     - Python
     - Qt

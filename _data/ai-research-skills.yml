@@ -1,0 +1,15 @@
+- name: Speech Processing & Generation
+  percentage: 100
+  color: success
+
+- name: Multi-modal LLMs & NLP
+  percentage: 80
+  color: success
+
+- name: Reinforcement Learning
+  percentage: 60
+  color: success
+
+- name: Geometric Deep Learning & GNNs
+  percentage: 50
+  color: warning

@@ -7,23 +7,18 @@ weight: 3
 
 # **About Me** <span><a href="https://github.com/Wadaboa/cv-resume/raw/master/cv.pdf" class="btn btn-info" id="cv-button">CV</a></span>
 
-:keyboard: Alessio is currently a full-time Applied Scientist at Amazon, in the Alexa Text-To-Speech team. Alessio got his master's degree in Artificial Intelligence at the University of Bologna, his bachelor's degree in Computer Science at the University of Florence (the city where he was born and raised) and he is now based in Cambridge, England.
+:bust_in_silhouette: Hi, I’m Alessio, currently an Applied Scientist at Amazon, where I focus on advancing speech generation technologies for Alexa and beyond. My work spans from research to production of deep learning models, with a keen interest in multilingual and multimodal systems. I’m also a firm believer in open science and enjoy every step of the publication process, from writing impactful papers to presenting results at international conferences. 
 
-:robot: Alessio has 2+ years of experience working as a freelance/part-time Software Engineer for multiple companies and has put into practice his expertise in Image Processing, Computer Vision and Natural Language Processing for interesting applications such as OCR. Other than his professional experience, he has been studying and experimenting in ICT and Computer Science for 10+ years.
+:robot: On the engineering side, I remember falling in love with the words of Kernighan and Ritchie in their famous book of C (the programming language), while being in middle school. Since then, I’ve been experimenting with programming, tinkering with computer science and developing a great passion in Linux and open-source software overall. Over the years, I’ve grown a strong foundation in machine learning frameworks, cloud platforms, and software engineering principles, and I’m always excited to dive deeper into new challenges and technologies.
 
-:books: Alessio loves to acquire new knowledge, develop his technical and non-technical skills and competencies and enjoys applying his learnings in the everyday job. As for AI, he likes to closely follow the whole development pipeline, from research to production, and he is currently mastering topics such as Speech Processing, Text-To-Speech and Graph Neural Networks. Alessio is also an avid Apple user and has a great passion for Linux and open-source software overall.
 
 <div class="row skills-row">
+{% include about/skills.html title="AI/Research" source=site.data.ai-research-skills %}
 {% include about/skills.html title="Programming" source=site.data.programming-skills %}
-{% include about/skills.html title="Cloud" source=site.data.cloud-skills %}
 </div>
 <div class="row skills-row">
-{% include about/skills.html title="AI Frameworks/Libraries" source=site.data.ai-frameworks-skills %}
-{% include about/skills.html title="AI Technologies" source=site.data.ai-tech-skills %}
-</div>
-<div class="row skills-row">
-{% include about/skills.html title="Tools" source=site.data.tools-skills %}
-{% include about/skills.html title="Web" source=site.data.web-skills %}
+{% include about/skills.html title="Libraries" source=site.data.libraries-skills %}
+{% include about/skills.html title="Cloud/Web" source=site.data.cloud-web-skills %}
 </div>
 <div class="row skills-row">
 {% include about/skills.html title="Languages" source=site.data.languages-skills %}

@@ -1,9 +1,5 @@
-- name: Wordpress
+- name: AWS
   percentage: 100
-  color: success
-
-- name: Django/Flask
-  percentage: 80
   color: success
 
 - name: HTML/CSS/JS/jQuery
@@ -12,4 +8,8 @@
 
 - name: PHP/MySQL/REST API
   percentage: 70
+  color: warning
+
+- name: Azure
+  percentage: 50
   color: warning

@@ -1,0 +1,16 @@
+- name: PyTorch/TensorFlow
+  percentage: 100
+  color: success
+
+- name: NumPy/Pandas/SciPy
+  percentage: 90
+  color: success
+
+- name: OpenCV
+  percentage: 70
+  color: warning
+
+- name: Django/Flask
+  percentage: 45
+  color: danger
+

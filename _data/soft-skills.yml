@@ -6,10 +6,6 @@
   percentage: 100
   color: success
 
-- name: Problem solving
-  percentage: 90
-  color: success
-
 - name: Project management/Leadership
   percentage: 90
   color: success

@@ -1,0 +1,11 @@
+services:
+  jekyll:
+    image: jekyll-site:latest
+    build:
+      context: .
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/_site
+    ports:
+      - "4000:4000"
+    command: rm -rf /usr/src/app/_site && bundle exec jekyll build --destination /usr/src/app/_site

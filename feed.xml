@@ -11,7 +11,7 @@
 		<sy:updateFrequency>1</sy:updateFrequency>
 		<link>https://alessiofalai.it</link>
 		<atom:link href="https://alessiofalai.it/feed.xml" rel="self" type="application/rss+xml" />
-		<lastBuildDate>Sun, 06 Mar 2022 00:00:00 +0100</lastBuildDate>
+		<lastBuildDate>Sun, 06 Mar 2022 00:00:00 +0000</lastBuildDate>
 		
 		
 			<item>
@@ -20,7 +20,7 @@
 				
 					<description>Demo page containing audio samples for all the models evaluated in my master's thesis.</description>
 				
-				<pubDate>Sun, 06 Mar 2022 00:00:00 +0100</pubDate>
+				<pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate>
 				<link>https://alessiofalai.it/blog/master-thesis-samples</link>
 				<guid isPermaLink="true">https://alessiofalai.it/blog/master-thesis-samples</guid>
 			</item>
@@ -31,7 +31,7 @@
 				
 					<description>An overview of my team's solutions and approaches to the 2020 NeurIPS Flatland challenge, by AIcrowd.</description>
 				
-				<pubDate>Mon, 25 Jan 2021 00:00:00 +0100</pubDate>
+				<pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
 				<link>https://alessiofalai.it/blog/flatland-challenge</link>
 				<guid isPermaLink="true">https://alessiofalai.it/blog/flatland-challenge</guid>
 			</item>
@@ -42,7 +42,7 @@
 				
 					<description>A simple guide on how to make your GitHub profile pop.</description>
 				
-				<pubDate>Fri, 21 Aug 2020 00:00:00 +0200</pubDate>
+				<pubDate>Fri, 21 Aug 2020 00:00:00 +0000</pubDate>
 				<link>https://alessiofalai.it/blog/github-profile-readme</link>
 				<guid isPermaLink="true">https://alessiofalai.it/blog/github-profile-readme</guid>
 			</item>
@@ -53,7 +53,7 @@
 				
 					<description>A tutorial on how to build a static site using Jekyll and on how to automatically deploy it to Github Pages using Travis CI.</description>
 				
-				<pubDate>Mon, 23 Mar 2020 00:00:00 +0100</pubDate>
+				<pubDate>Mon, 23 Mar 2020 00:00:00 +0000</pubDate>
 				<link>https://alessiofalai.it/blog/jekyll-ghpages-travis</link>
 				<guid isPermaLink="true">https://alessiofalai.it/blog/jekyll-ghpages-travis</guid>
 			</item>
@@ -64,7 +64,7 @@
 				
 					<description>The highlighting of some key differences between Java interfaces and the fancy Scala traits.</description>
 				
-				<pubDate>Fri, 13 Mar 2020 00:00:00 +0100</pubDate>
+				<pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
 				<link>https://alessiofalai.it/blog/scala-traits</link>
 				<guid isPermaLink="true">https://alessiofalai.it/blog/scala-traits</guid>
 			</item>

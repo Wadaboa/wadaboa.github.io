@@ -42,7 +42,7 @@ docker-compose -f docker-compose.build.yml up --build
 To deploy, use the following command.
 
 ```bash
-docker-compose -f docker-compose.deploy.yml up --build
+./deploy.sh
 ```
 
-This will rely on [`jgd`](https://github.com/yegor256/jekyll-github-deploy) to copy the `_site` folder content from the `release` branch into the `master` branch, which is what GitHub Pages uses to render the website.
+This will copy the `_site` folder content from the `release` branch into the `master` branch, which is what GitHub Pages uses to render the website.

@@ -21,6 +21,3 @@ COPY . .
 
 # Install Bundler and project dependencies
 RUN gem install bundler -v 2.4.22 && bundle install
-
-# Install Jekyll Github Deploy
-RUN gem install jgd

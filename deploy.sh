@@ -16,16 +16,10 @@ TEMP=$(mktemp -d -t jgd-XXX)
 trap 'rm -rf ${TEMP}' EXIT
 cp -R "${REPO}/_site" "${TEMP}"
 
-echo -e "\nPreparing ${BRANCH} branch:"
-if git branch -a | grep -q "origin/${BRANCH}"; then
-  git checkout --orphan "${BRANCH}"
-else
-  git checkout "${BRANCH}"
-fi
-
 echo -e "\nDeploying into ${BRANCH} branch:"
+git checkout "${BRANCH}"
 rm -rf ./**
-cp -R "${TEMP}"/* .
+cp -R "${TEMP}/_site"/* .
 rm -f README.md
 git add .
 git commit -am "new version $(date)" --allow-empty

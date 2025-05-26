@@ -22,8 +22,5 @@ COPY . .
 # Install Bundler and project dependencies
 RUN gem install bundler -v 2.4.22 && bundle install
 
-# Expose port 4000
-EXPOSE 4000
-
-# Start the Jekyll development server with live reloading
-CMD ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0", "--watch"]
+# Install Jekyll Github Deploy
+RUN gem install jgd

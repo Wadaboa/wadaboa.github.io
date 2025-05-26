@@ -2,39 +2,47 @@
 
 # My personal website
 
-This repository hosts the code used to deploy my personal website, portfolio and blog.\
-The website is based on the Jekyll template [portfolYOU](https://github.com/YoussefRaafatNasry/portfolYOU)
-and uses GitHub Pages to automate everything.\
-If you want to have a look, visit the link [alessiofalai.it](https://alessiofalai.it) or [wadaboa.github.io](https://wadaboa.github.io).
+This repository hosts the code used to deploy my personal website, portfolio and blog, which is based on the Jekyll template [portfolYOU](https://github.com/YoussefRaafatNasry/portfolYOU) and uses GitHub Pages to automate everything. If you want to have a look, visit the link [alessiofalai.it](https://alessiofalai.it) or [wadaboa.github.io](https://wadaboa.github.io).
 
-## Ruby version
+Credits to this [blog post](https://jogendra.dev/dockerize-your-jekyll-site-for-local-development) for the Docker setup.
 
-Make sure that you are using Ruby 2.6.3. In order to avoid fiddling with system-level configurations, install [RVM](https://gist.github.com/denji/8706676) and then run `rvm install 2.6.3`.
+## (1) Serve
 
-## Build
+**"Serving" means testing changes locally. To do that, operate from the `develop` branch.**
 
-In order to build the website locally, run:
+First of all, make sure you have Docker installed. Then, build the Docker image and run the container as follows.
 
 ```bash
-bundle exec jekyll build
+docker-compose -f docker-compose.serve.yml up --build
 ```
 
-The build stage populates the `_site` folder, meaning that executing the command above is mandatory before pushing changes to the `release` branch.
+Once the server starts, open your browser and navigate to http://localhost:4000. You should see your Jekyll website running locally. Note that changes made to local files will automatically reflect on the website after a short automatic rebuild by Jekyll.
 
-If instead you want to test changes locally, just run:
+## (2) Build
+
+**"Building" means preparing the changes for deployment. To do that, operate from the `release` branch.**
+
+First of all, merge changes from the `develop` branch (the ones you tested via "Serving") using the following command.
 
 ```bash
-bundle exec jekyll serve
+git checkout release
+git merge origin/develop
 ```
 
-This command will build the website and start a webserver at http://127.0.0.1:4000/. Remember that `serve` does not imply `build`.
-
-## Deploy
-
-To avoid messing with Travis CI, build and deploy locally using the following command:
+Now run the following Docker Compose command to build the website, which populates the `_site` folder.
 
 ```bash
-jgd -b master -r release
+docker-compose -f docker-compose.build.yml up --build
 ```
 
-If you don't have `jgd` available, install it with `gem install jgd` or visit [its GitHub repo](https://github.com/yegor256/jekyll-github-deploy) for more details.
+## (3) Deploy
+
+**"Deploying" means publishing the changes online. To do that, operate from the `release` branch.**
+
+To deploy, use the following command.
+
+```bash
+docker-compose -f docker-compose.deploy.yml up --build
+```
+
+This will rely on [`jgd`](https://github.com/yegor256/jekyll-github-deploy) to copy the `_site` folder content from the `release` branch into the `master` branch, which is what GitHub Pages uses to render the website.

@@ -1,0 +1,9 @@
+services:
+  jekyll:
+    image: jekyll-site:latest
+    build:
+      context: .
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/_site
+    command: jgd -b master -r release
